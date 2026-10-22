@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b90f25">
+  <meta name="description" content="An unofficial Wrexham AFC fan news hub: transfers, injuries, club news, videos and more.">
+  <title>Wrexham Reds · Fan News Hub</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="topbar wrap">
+      <div class="identity">
+        <div class="crest-box"><img id="crest" src="https://talosatscareerssites.blob.core.windows.net/cpb-site-assets/2850/images/WAFC_FULL_COLOUR_CREST_PNG.png" alt="Wrexham AFC crest"><span id="crestFallback" aria-hidden="true">W</span></div>
+        <div><div class="eyebrow light">THE RED DRAGONS · UNOFFICIAL FAN APP</div><h1>WREXHAM <span>REDS</span></h1><p>Your club. Every story. One place.</p></div>
+      </div>
+      <nav class="top-navigation" aria-label="Main navigation"><a href="#stories">News</a><a href="#videos">Videos</a><a href="#sources">Sources</a></nav>
+      <button id="bookmarksBtn" class="icon-button" aria-label="Show saved articles" title="Saved stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span id="savedCount" class="counter">0</span></button>
+    </div>
+    <div class="hero wrap"><div class="hero-main"><span class="section-label"><span class="red-dot"></span> THE INDEPENDENT RED DRAGONS HUB</span><h2>Every story.<br><em>Every Wrexham moment.</em></h2><p>The latest football headlines, transfers, player updates and official club videos — all in one place, built for the fans.</p><div class="hero-actions"><a class="primary-action" href="#stories">Explore the news <span aria-hidden="true">↗</span></a><a class="quiet-action" href="#videos">Official videos <span aria-hidden="true">▶</span></a></div></div><div class="hero-stamp" aria-hidden="true"><span class="stamp-small">THE RED DRAGONS</span><strong>1864</strong><span>UP THE TOWN</span></div></div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="status-bar" role="status"><div class="status-dot" id="statusDot"></div><div><strong id="statusHeadline">Preview mode</strong><span id="statusMessage">News will populate after the GitHub updater runs.</span></div><div class="status-date" id="updatedAt"></div></section>
+
+    <section class="news-section" id="stories" aria-labelledby="newsHeading">
+      <div class="section-heading"><div><div class="eyebrow">THE NEWSROOM</div><h2 id="newsHeading">Latest from the Racecourse</h2><p class="section-subtitle">All the stories that matter, organised for Wrexham fans.</p></div><label class="search-field"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search stories..." aria-label="Search stories"></label></div>
+      <nav class="tabs" aria-label="News category filters" id="categories">
+        <button class="tab active" data-category="All" aria-pressed="true">All news</button>
+        <button class="tab" data-category="Transfers" aria-pressed="false">Transfers</button>
+        <button class="tab" data-category="Injuries" aria-pressed="false">Injuries</button>
+        <button class="tab" data-category="Players" aria-pressed="false">Player news</button>
+        <button class="tab" data-category="Club" aria-pressed="false">Club news</button>
+        <button class="tab" data-category="Matches" aria-pressed="false">Matches</button>
+      </nav>
+      <div class="content-layout"><div><div class="feed-caption"><span id="feedTag">PREVIEW</span><span id="feedCaptionText">Sample cards to showcase the layout — not real news.</span></div><div id="newsList" class="news-list" aria-live="polite"></div><p class="disclaimer">Articles are credited to their publishers and open on the original website. Wrexham Reds is an independent fan-news source, not an official club announcement.</p></div><aside class="sidebar" id="sources"><div class="aside-card"><div class="eyebrow">YOUR SOURCES</div><h3>The news lineup</h3><ul class="sources" id="sourceList"></ul></div><div class="aside-card red-card"><div class="eyebrow">FROM THE CLUB</div><h3>Official Wrexham AFC news</h3><p>The club website is linked directly until a permitted automatic feed is confirmed.</p><a href="https://www.wrexhamafc.co.uk/news/" target="_blank" rel="noopener noreferrer">Visit official news ↗</a></div><div class="aside-card"><div class="eyebrow">IN THE KNOW</div><h3>Transfer status</h3><p><b>Official:</b> announced by Wrexham AFC directly.<br><b>Reported:</b> covered by press or fan journalists.<br><b>Rumour:</b> not confirmed by the club.</p><p class="tiny">News category tags are automated guesses, not editorial fact-checking.</p></div></aside></div>
+    </section>
+
+    <section class="videos-section" id="videos" aria-labelledby="videosHeading"><div class="section-heading"><div><div class="eyebrow">WATCH THE REDS</div><h2 id="videosHeading">Inside Wrexham AFC</h2><p>From <a href="https://www.youtube.com/@WxmAFCofficial" target="_blank" rel="noopener noreferrer">Wrexham AFC on YouTube ↗</a> · Videos and Shorts appear together in the channel feed.</p></div></div><div id="videoList" class="videos-list"></div></section>
+    <section class="links-section"><div class="eyebrow">KEEP EXPLORING</div><h2>Wrexham, everywhere.</h2><div class="quicklinks"><a href="https://www.wrexhamafc.co.uk/" target="_blank" rel="noopener noreferrer"><b>Wrexham AFC</b><span>Official club website ↗</span></a><a href="https://www.wrexhamreds.com/" target="_blank" rel="noopener noreferrer"><b>Wrexham Reds</b><span>Fan coverage ↗</span></a><a href="https://www.bbc.co.uk/sport/football" target="_blank" rel="noopener noreferrer"><b>BBC Sport</b><span>Football reporting ↗</span></a><a href="https://www.skysports.com/football" target="_blank" rel="noopener noreferrer"><b>Sky Sports</b><span>Football headlines ↗</span></a></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><strong>WREXHAM <span>REDS</span></strong><span>Independent fan-made project · Not affiliated with or endorsed by Wrexham AFC, BBC, Sky Sports, Wrexham Reds or YouTube.</span><span>Up the Town! 🔴</span></div></footer>
+  <dialog id="playerDialog" class="player-dialog"><div class="player-top"><strong id="playerTitle">Club video</strong><button id="playerClose" class="close-button" aria-label="Close video">✕</button></div><div class="player-frame"><iframe id="playerFrame" title="YouTube video player" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><p>If playback is disabled here, <a id="externalVideo" target="_blank" rel="noopener noreferrer">watch on YouTube ↗</a>.</p></dialog>
+</body>
+</html>
