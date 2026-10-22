@@ -1,13 +1,252 @@
 {
-  "updated_at": null,
-  "news": [],
-  "videos": [],
+  "updated_at": "2026-10-22T19:23:41+00:00",
+  "news": [
+    {
+      "id": "1aad472d1e23782dd8e854",
+      "title": "WATCH: Last time Wrexham travelled to Ewood Park, Rathbone scored this screamer",
+      "summary": "Last time Wrexham travelled to Ewood Park, Rathbone produced this absolute screamer! 😍🔴⚪",
+      "url": "https://www.wrexhamreds.com/match-coverage/last-time-wrexham-travelled-to-ewood-park-rathbone-scored-this-screamer/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-22T15:02:33+00:00",
+      "category": "Matches"
+    },
+    {
+      "id": "a29cc73618c6afd8c3927e",
+      "title": "Phil Parkinson gives fresh Wrexham injury update on Ben Sheaf and Max Cleworth",
+      "summary": "🔴⚪ Phil Parkinson has provided an update on Ben Sheaf and Max Cleworth ahead of Wrexham's next Championship fixture.",
+      "url": "https://www.wrexhamreds.com/news/phil-parkinson-gives-fresh-wrexham-injury-update-on-ben-sheaf-and-max-cleworth/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-22T14:56:08+00:00",
+      "category": "Injuries"
+    },
+    {
+      "id": "90ffc1009feda3ebf81f1a",
+      "title": "Why 22nd October will ALWAYS hold a special place in the history of Wrexham AFC and Welsh football",
+      "summary": "We look at why 22 October will always be a special date for Wrexham supporters",
+      "url": "https://www.wrexhamreds.com/features/why-22nd-october-will-always-hold-a-special-place-in-the-history-of-wrexham-afc-and-welsh-football/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-22T14:41:04+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "53a13651662f257ec34dea",
+      "title": "Phil Parkinson reaches remarkable Wrexham milestone with home victory against PNE",
+      "summary": "A difficult week, a big response and a remarkable milestone now reached for Parky 🔴⚪",
+      "url": "https://www.wrexhamreds.com/features/phil-parkinson-reaches-remarkable-wrexham-milestone-with-home-victory-against-pne/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-22T14:22:41+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "019c60f9d99d8b3b3be7a8",
+      "title": "Wrexham AFC",
+      "summary": "Wrexham boss Phil Parkinson speaking before their trip to Blackburn Rovers.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0pj17cq?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-22T14:02:00+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "05b6f0f466d2faeab502c0",
+      "title": "Parkinson's gratitude as Wrexham boss hits landmark",
+      "summary": "Phil Parkinson praised Wrexham's \"togetherness\" as he became the second-longest serving manager in the English Football League.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cqlye4p71l0zo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-22T13:16:55+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "ab6635968d54850656c3e9",
+      "title": "Paul Mullin reveals the Wrexham promotion memory that still means more than any other moment",
+      "summary": "❤️ Paul Mullin has enjoyed some incredible Wrexham moments, but there's one night he says will never be beaten.",
+      "url": "https://www.wrexhamreds.com/news/paul-mullin-reveals-the-wrexham-promotion-memory-that-still-means-more-than-any-other-moment/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-22T07:52:25+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "2afcf813a3fcb1f8de2a9d",
+      "title": "Wrexham’s true Championship position revealed as expected table exposes worrying attacking numbers",
+      "summary": "Wrexham's expected Championship position has been revealed. But the attacking numbers tell a more concerning story for Phil Parkinson 🔴⚪",
+      "url": "https://www.wrexhamreds.com/news/wrexhams-true-championship-position-revealed-as-expected-table-exposes-worrying-attacking-numbers/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-21T06:30:21+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "6086b16896b180d36d69df",
+      "title": "Wrexham fans react as club reveals stunning ‘POV: Walking to the top of the Kop’ video",
+      "summary": "The view from Wrexham's new Kop is taking shape! 🔴⚪ Fans are loving the latest Racecourse Ground footage, and joking about the climb.",
+      "url": "https://www.wrexhamreds.com/features/wrexham-fans-react-as-club-reveals-stunning-pov-walking-to-the-top-of-the-kop-video/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-20T17:22:04+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "4806b91db7787b5cb81aad",
+      "title": "Josh Windass injury update as Wrexham supporter reports extended absence",
+      "summary": "Josh Windass could face a longer on the sidelines than expected, according to a Wrexham supporter 🗣️",
+      "url": "https://www.wrexhamreds.com/news/josh-windass-injury-update-as-wrexham-supporter-reports-extended-absence/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-20T17:11:16+00:00",
+      "category": "Injuries"
+    },
+    {
+      "id": "4ac663c05bb56ec1fde6dd",
+      "title": "Ben Whiteman sends Wrexham warning despite emphatic Preston victory",
+      "summary": "Wrexham won 4-1, but Ben Whiteman says there is still work to do. Here's what he wants the Red Dragons to improve. 🔴⚪",
+      "url": "https://www.wrexhamreds.com/news/ben-whiteman-sends-wrexham-warning-despite-emphatic-preston-victory/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-20T05:39:00+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "5546b337aa9ae16644795f",
+      "title": "Wrexham’s forgotten teenage record-breaker who made history 44 years ago",
+      "summary": "44 years ago, he made Wrexham history at just 17. His incredible record lasted 20 years before Craig Morgan beat it by two days!",
+      "url": "https://www.wrexhamreds.com/features/wrexhams-forgotten-teenage-record-breaker-who-made-history-44-years-ago/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-19T17:11:10+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "d45ed460c9d4ebe9bb1cb3",
+      "title": "Whiteman responds to Preston boos as Wrexham ease pressure",
+      "summary": "Ben Whiteman looks up with Wrexham in Championship after responding to Preston jeers by scoring against his former club.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c574pdzjjkmxo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-18T14:40:35+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "84164831398d95a3d25a3d",
+      "title": "Wrexham had to block outside noise - Parkinson",
+      "summary": "Wrexham had to \"block everything out\", says Phil Parkinson, after they respond to recent criticism with a victory over Preston North End.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c38xzv091v5go?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-17T18:41:33+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "f2bd8fa27c2a129d1d2e11",
+      "title": "Cardiff & Wrexham win big but TNS top Adran Premier",
+      "summary": "Cardiff score 10 while Wrexham net eight but The New Saints maintain their perfect start and top spot in the Adran Premier.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cmx23enye615o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-11T15:46:04+00:00",
+      "category": "Matches"
+    },
+    {
+      "id": "ad8ecc95d02022f11bc8a8",
+      "title": "Wrexham's Kop: The project matching the club's rise",
+      "summary": "Wrexham's new Kop stand a signal of their ambition to keep climbing from the Championship to the Premier League.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c5dj4j2kvm98o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-07T05:25:09+00:00",
+      "category": "Matches"
+    },
+    {
+      "id": "3275d831e1da5c55da5d50",
+      "title": "Wrexham making rapid progress with new Kop Stand",
+      "summary": "Wrexham chief strategy officer Aidan Miller says the new Kop Stand is on plan to be fully operational by the start of the 2027-28 season.",
+      "url": "https://www.bbc.co.uk/sport/football/videos/ckx2qnd315vlo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-06T19:12:30+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "dc78fbd245960cdbe5c8fd",
+      "title": "TNS score late winner to end Wrexham's 100% record",
+      "summary": "Wrexham drop points for the first time this season as The New Saints take over as leaders of the Adran Premier.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cwjdm5x035r5o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-04T16:15:19+00:00",
+      "category": "Matches"
+    }
+  ],
+  "videos": [
+    {
+      "video_id": "ek13bNGpiJE",
+      "title": "PRESS CONFERENCE | Phil Parkinson ahead of Blackburn Rovers",
+      "published": "2026-10-22T17:42:34+00:00"
+    },
+    {
+      "video_id": "iPIGepxwMFQ",
+      "title": "POV: Walking to the top of the Kop 📲🔴⚪️ #WxmAFC",
+      "published": "2026-10-20T14:26:50+00:00"
+    },
+    {
+      "video_id": "7z9L-34DhDg",
+      "title": "HIGHLIGHTS | Wrexham AFC vs Preston North End",
+      "published": "2026-10-20T09:34:39+00:00"
+    },
+    {
+      "video_id": "FXidCLOg0Mg",
+      "title": "TRIPLE A | Wrexham AFC vs Preston North End",
+      "published": "2026-10-19T20:00:33+00:00"
+    },
+    {
+      "video_id": "Ot-ZYW5JuRE",
+      "title": "HIGHLIGHTS | Wrexham AFC Women vs Cardiff Met",
+      "published": "2026-10-18T21:06:10+00:00"
+    },
+    {
+      "video_id": "QlToO4iqCeY",
+      "title": "HOT TAKE | Wrexham v Cardiff Met",
+      "published": "2026-10-18T15:43:57+00:00"
+    },
+    {
+      "video_id": "Yf12XXP4MSM",
+      "title": "Wrexham Match Day Live - Wrexham vs Preston North End",
+      "published": "2026-10-18T04:55:14+00:00"
+    },
+    {
+      "video_id": "0OWXNEY86kM",
+      "title": "INTERVIEW | Ben Whiteman after Preston North End",
+      "published": "2026-10-17T17:27:26+00:00"
+    },
+    {
+      "video_id": "H8e4vFlpzFM",
+      "title": "INTERVIEW | Phil Parkinson after Preston North End",
+      "published": "2026-10-17T17:26:34+00:00"
+    },
+    {
+      "video_id": "xlHi9YkEcI0",
+      "title": "Y CHWIBAN TERFYNOL | Wrecsam yn erbyn Preston",
+      "published": "2026-10-17T16:43:17+00:00"
+    },
+    {
+      "video_id": "Cvzj8_Ib57E",
+      "title": "HOT TAKE | Wrexham v Preston North End",
+      "published": "2026-10-17T16:08:57+00:00"
+    },
+    {
+      "video_id": "wrYDm8dk8ro",
+      "title": "PRESS CONFERENCE | Matty James ahead of Preston North End",
+      "published": "2026-10-16T16:41:32+00:00"
+    },
+    {
+      "video_id": "oByOD_LcYF8",
+      "title": "PRESS CONFERENCE | Phil Parkinson ahead of Preston North End",
+      "published": "2026-10-16T13:33:23+00:00"
+    },
+    {
+      "video_id": "NMac2f_kxzQ",
+      "title": "TRIPLE A | Wrexham AFC vs West Bromwich Albion",
+      "published": "2026-10-15T16:42:29+00:00"
+    },
+    {
+      "video_id": "-msdRAEwc8w",
+      "title": "INTERVIEW | Wrexham AFC Women General Manager Saara Hassoun",
+      "published": "2026-10-14T14:30:30+00:00"
+    }
+  ],
   "sources": {
-    "Wrexham Reds": "pending first update",
-    "BBC Sport": "pending first update",
-    "BBC Welsh Football": "pending first update",
-    "BBC Sport Championship": "pending first update",
-    "Sky Sports": "pending first update",
-    "Wrexham AFC YouTube": "pending first update"
+    "Wrexham Reds": "OK (10 relevant items)",
+    "BBC Welsh Football": "OK (8 relevant items)",
+    "BBC Sport Championship": "OK (1 relevant items)",
+    "BBC Sport": "OK (0 relevant items)",
+    "Sky Sports": "OK (0 relevant items)",
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
