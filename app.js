@@ -106,6 +106,35 @@ async function start(){const crest=$('#crest');crest.addEventListener('error',()
   $('#bookmarksBtn').addEventListener('click',()=>{savedOnly=!savedOnly;$('#stories').scrollIntoView({behavior:'smooth'});renderStories()});
   $('#playerClose').addEventListener('click',()=>$('#playerDialog').close());
   $('#playerDialog').addEventListener('close',()=>{$('#playerFrame').src='about:blank'});
-  try{const response=await fetch(DATA_URL,{cache:'no-store'});if(!response.ok)throw Error('No data yet');const incoming=await response.json();if(!Array.isArray(incoming.news)||!Array.isArray(incoming.videos))throw Error('Invalid news data');data=incoming;renderStatus();renderStories();renderVideos()}catch(err){$('#statusMessage').textContent=location.protocol==='file:'?'Local preview: automatic news works after GitHub publication.':'No published news yet. Run the GitHub feed updater to populate headlines.'}
+  try{const response=await fetch(DATA_URL,{cache:'no-store'});if(!response.ok)throw Error('No data yet');const incoming=await response.json();if(!Array.isArray(incoming.news)||!Array.isArray(incoming.videos))throw Error('Invalid news data');data=incoming;renderStatus();renderStories();renderVideos();window.dispatchEvent(new Event("wrexham-news-updated"))}catch(err){$('#statusMessage').textContent=location.protocol==='file:'?'Local preview: automatic news works after GitHub publication.':'No published news yet. Run the GitHub feed updater to populate headlines.'}
 }
 start();
+
+
+/* VERSION 1.3 — Match centre, Championship table, transfers and squad */
+const SPORTS_URL='data/sports.json';
+let sports={updated_at:null,standings:[],fixtures:[],results:[],squad:[],source:null,status:'not_configured'};
+const formatKickoff=(iso)=>{if(!iso)return 'Kick-off to be confirmed';const d=new Date(iso);if(isNaN(+d))return 'Kick-off to be confirmed';return new Intl.DateTimeFormat('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZoneName:'short'}).format(d)};
+function safeText(parent,tag,cls,value){const p=el(tag,cls,String(value??''));parent.append(p);return p}
+function resultsPanel(){const target=$('#recentResults');target.replaceChildren();if(!sports.results?.length){safeText(target,'p','sport-empty','Latest results will appear after connecting match data.');return}
+  for(const m of sports.results.slice(0,3)){const card=el('div','result-row');const teams=el('div');safeText(teams,'strong','',`${m.home} – ${m.away}`);safeText(teams,'span','',formatKickoff(m.kickoff));const score=safeText(card,'div','result-score',m.home_score==null?'—':`${m.home_score} : ${m.away_score}`);card.prepend(teams);target.append(card)}
+}
+function nextMatchPanel(){const target=$('#nextMatch');target.replaceChildren();const m=sports.fixtures?.[0];if(!m){safeText(target,'p','skeleton-match','Next fixture will appear once the match data service is connected.');return}
+  safeText(target,'div','fixture-matchdate',formatKickoff(m.kickoff));const teams=el('div','teams');safeText(teams,'strong','',m.home);safeText(teams,'span','versus','VS');safeText(teams,'strong','',m.away);target.append(teams);safeText(target,'div','venue-line',m.competition||'EFL Championship')
+}
+function tablePanel(){const target=$('#standingsBody');target.replaceChildren();const rows=sports.standings||[];$('#standings-label').classList.toggle('connected',rows.length>0);$('#standings-label').textContent=rows.length?'UPDATED TABLE':'AWAITING DATA';if(!rows.length){const row=el('tr');const cell=safeText(row,'td','empty-cell','The current league table will load once the free football API is configured.');cell.colSpan=5;target.append(row);return}
+  for(const r of rows){const tr=el('tr',/wrexham/i.test(r.team)?'wrexham-row':'');for(const k of ['position','team','played','goal_difference','points'])safeText(tr,'td','',r[k]??'—');target.append(tr)}
+}
+function squadPanel(){const target=$('#squadGrid');target.replaceChildren();const search=$('#playerSearch').value.trim().toLowerCase();const list=(sports.squad||[]).filter(p=>String(p.name||'').toLowerCase().includes(search));if(!list.length){safeText(target,'div','sport-empty-card',search?'No matching player found.':'The player roster will load if the football data provider makes squad information available.');return}
+  for(const p of list){const tile=el('article','player-tile');const initials=(p.name||'W').split(/\s+/).slice(0,2).map(n=>n[0]).join('').toUpperCase();safeText(tile,'div','player-portrait',initials);safeText(tile,'div','player-position',p.position||'Player');safeText(tile,'h3','',p.name||'Player');safeText(tile,'p','',p.nationality||'Nationality unavailable');if(p.dob){const age=Math.floor((Date.now()-new Date(p.dob).getTime())/(365.25*864e5));if(age>=15&&age<55)safeText(tile,'p','',`Age: ${age}`)}
+    const btn=safeText(tile,'button','','Find news ↗');btn.addEventListener('click',()=>{$('#searchInput').value=p.name;query=p.name.toLowerCase();filter='All';savedOnly=false;updateCategory();renderStories();$('#stories').scrollIntoView({behavior:'smooth'})});target.append(tile)
+  }
+}
+function transferPanel(){const target=$('#transferList');target.replaceChildren();const transfers=(data.news||[]).filter(n=>n.category==='Transfers').slice(0,7);if(!transfers.length){safeText(target,'div','sport-empty-card','Transfer news will appear here when related reports arrive in the news feeds. No deals are labelled official without verification.');return}
+ for(let i=0;i<transfers.length;i++){const n=transfers[i];const row=el('article','transfer-story');safeText(row,'div','transfer-number',String(i+1).padStart(2,'0'));const info=el('div');const a=safeText(info,'a','',n.title||'Transfer story');const url=safeHttp(n.url);if(url){a.href=url;a.target='_blank';a.rel='noopener noreferrer'}else a.removeAttribute('href');safeText(info,'small','',`${n.source||'Publisher'} · ${shortDate(n.published)||'Date unavailable'}`);row.append(info);safeText(row,'span','report-label','REPORTED · UNVERIFIED');target.append(row)}
+}
+function renderSports(){nextMatchPanel();resultsPanel();tablePanel();squadPanel();const connected=!!sports.updated_at;$('#sports-updated').textContent=connected?'Refreshed '+shortDate(sports.updated_at)+' · free data can lag':'Sports feed awaits setup';$('.pulse-indicator').classList.toggle('connected',connected)}
+async function loadSports(){try{const response=await fetch(SPORTS_URL,{cache:'no-store'});if(response.ok){const content=await response.json();if(Array.isArray(content.standings)&&Array.isArray(content.fixtures))sports=content}}catch(e){}renderSports()}
+window.addEventListener('wrexham-news-updated',transferPanel);
+$('#playerSearch').addEventListener('input',squadPanel);
+renderSports();transferPanel();loadSports();
