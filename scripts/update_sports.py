@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 OUTPUT = Path(__file__).resolve().parents[1] / 'data' / 'sports.json'
+HEALTH = OUTPUT.with_name('sports-status.json')
 TOKEN = os.environ.get('FOOTBALL_DATA_TOKEN', '').strip()
 ROOT = 'https://api.football-data.org/v4'
 
@@ -24,7 +25,7 @@ def get(endpoint):
     request = urllib.request.Request(
         ROOT + endpoint,
         headers={'X-Auth-Token': TOKEN, 'Accept': 'application/json',
-                 'User-Agent': 'WrexhamReds-FanHub/1.3 (Championship match-data reader)'},
+                 'User-Agent': 'WrexhamReds-FanHub/1.4 (Championship match-data reader)'},
     )
     with urllib.request.urlopen(request, timeout=25) as response:
         if response.status != 200:
@@ -35,11 +36,43 @@ def get(endpoint):
     return json.loads(raw)
 
 
+def write_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix('.tmp')
+    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    temporary.replace(path)
+
+
+def health(status):
+    # Only a fixed status code is public, never response bodies or credentials.
+    write_json(HEALTH, {'status': status, 'checked_at': datetime.now(timezone.utc).isoformat(timespec='seconds')})
+
+
+def validate_payloads(standings, matches):
+    if not isinstance(standings, dict) or not isinstance(matches, dict):
+        raise ValueError('Invalid response')
+    season = standings.get('season') or {}
+    if not season.get('id') or not season.get('startDate') or not season.get('endDate'):
+        raise ValueError('Season absent')
+    if (matches.get('competition') or {}).get('code') != 'ELC' or (standings.get('competition') or {}).get('code') != 'ELC':
+        raise ValueError('Wrong competition')
+    if not isinstance(matches.get('matches'), list):
+        raise ValueError('Match list absent')
+    for match in matches['matches']:
+        if (match.get('season') or {}).get('id') != season['id']:
+            raise ValueError('Mixed seasons')
+        date = datetime.fromisoformat(match['utcDate'].replace('Z', '+00:00'))
+        if date.tzinfo is None or not match.get('status'):
+            raise ValueError('Invalid match')
+    return season
+
+
 def simplify_match(match):
     home = match.get('homeTeam') or {}
     away = match.get('awayTeam') or {}
     full = (match.get('score') or {}).get('fullTime') or {}
     return {
+        'id': match.get('id'),
         'home': home.get('shortName') or home.get('name') or 'Home',
         'away': away.get('shortName') or away.get('name') or 'Away',
         'kickoff': match.get('utcDate'),
@@ -53,15 +86,21 @@ def simplify_match(match):
 def main():
     if not TOKEN:
         print('FOOTBALL_DATA_TOKEN not configured; sports section remains in setup mode.')
+        health('not_configured')
         return 0
     try:
         standings_payload = get('/competitions/ELC/standings')
         matches_payload = get('/competitions/ELC/matches')
-        teams_payload = get('/competitions/ELC/teams')
+        season = validate_payloads(standings_payload, matches_payload)
         tables = standings_payload.get('standings', [])
         table = next((t.get('table') or [] for t in tables if t.get('type') == 'TOTAL'), [])
         if not table:
-            table = tables[0].get('table') or [] if tables else []
+            raise ValueError('Overall standings absent')
+        for row in table:
+            if not (row.get('team') or {}).get('id') or not (row.get('team') or {}).get('name'):
+                raise ValueError('Invalid standings team')
+            if any(type(row.get(k)) is not int for k in ('position', 'playedGames', 'goalDifference', 'points')):
+                raise ValueError('Invalid standings values')
         standings = [
             {
                 'position': row.get('position'),
@@ -72,7 +111,7 @@ def main():
             }
             for row in table if (row.get('team') or {}).get('name')
         ]
-        team = next((t for t in teams_payload.get('teams', []) if 'wrexham' in (t.get('name') or '').lower()), None)
+        team = next((r['team'] for r in table if 'wrexham' in r['team']['name'].lower()), None)
         if not team:
             raise ValueError('Wrexham not found in Championship team list; keeping existing data.')
         team_id = team.get('id')
@@ -80,7 +119,8 @@ def main():
             return team_id in [((match.get(key) or {}).get('id')) for key in ('homeTeam','awayTeam')]
         today = datetime.now(timezone.utc)
         all_wrexham = [m for m in matches_payload.get('matches', []) if is_wrexham(m)]
-        upcoming = sorted([m for m in all_wrexham if m.get('status') in ('SCHEDULED', 'TIMED', 'POSTPONED') and m.get('utcDate') and datetime.fromisoformat(m['utcDate'].replace('Z','+00:00')) >= today], key=lambda m: m.get('utcDate'))
+        upcoming = sorted([m for m in all_wrexham if m.get('status') in ('SCHEDULED', 'TIMED') and datetime.fromisoformat(m['utcDate'].replace('Z','+00:00')) >= today], key=lambda m: m['utcDate'])
+        pending = sorted([m for m in all_wrexham if m.get('status') not in ('FINISHED', 'AWARDED') and m not in upcoming], key=lambda m: m['utcDate'], reverse=True)
         finished = sorted([m for m in all_wrexham if m.get('status') == 'FINISHED'], key=lambda m: m.get('utcDate') or '', reverse=True)
         squad = []
         try:
@@ -100,19 +140,24 @@ def main():
             'updated_at': today.isoformat(timespec='seconds'),
             'source': 'football-data.org',
             'status': 'connected',
+            'season': {'start': season['startDate'], 'end': season['endDate']},
             'standings': standings,
             'fixtures': [simplify_match(m) for m in upcoming[:8]],
             'results': [simplify_match(m) for m in finished[:8]],
+            'pending': [simplify_match(m) for m in pending[:8]],
             'squad': squad[:65],
         }
         # Guard against a successful HTTP response with an unexpected schema.
         if not standings or not isinstance(matches_payload.get('matches'), list):
             raise ValueError('Championship standings or match list absent; keeping previous data.')
-        OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-        OUTPUT.write_text(json.dumps(new_data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+        write_json(OUTPUT, new_data)
+        health('connected')
         print(f"Sports ready: {len(standings)} teams, {len(new_data['fixtures'])} upcoming, {len(new_data['results'])} results, {len(squad)} players.")
-    except (urllib.error.URLError, ValueError, json.JSONDecodeError, TimeoutError) as exc:
+    except (urllib.error.URLError, ValueError, TimeoutError, KeyError, TypeError, AttributeError) as exc:
         print('Sports feed unavailable or token lacks access; previous data preserved:', type(exc).__name__, file=sys.stderr)
+        code = getattr(exc, 'code', None)
+        health({401: 'unauthorized', 403: 'access_denied', 429: 'rate_limited'}.get(code, 'unavailable'))
+        return 1
     return 0
 
 if __name__ == '__main__':
