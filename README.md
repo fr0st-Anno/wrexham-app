@@ -1,5 +1,7 @@
 # Wrexham Reds — Unofficial Wrexham AFC Fan Hub
 
+**Next release (draft):** iPhone home-screen support, comfortable mobile controls, automatic Pages publishing, and improved Championship data handling. See [INSTALL.md](INSTALL.md) for the current activation and installation instructions. These replace the legacy ZIP and branch-based Pages instructions below. No merge or deployment is implied by this draft.
+
 **Version 1.3**: Match Centre, Championship table, transfer desk, squad cards, improved mobile design, plus original RSS news, search, bookmarks and YouTube.
 
 The original Wrexham news feed, transfer categories, injury reports, bookmarks, search and official Wrexham YouTube player remain available.

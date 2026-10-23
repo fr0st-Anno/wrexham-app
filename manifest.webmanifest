@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Wrexham Reds — Fan Hub",
+  "short_name": "Wrexham Reds",
+  "description": "Your Wrexham news, videos and Championship match centre.",
+  "lang": "en-GB",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#b90f25",
+  "icons": [
+    {"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

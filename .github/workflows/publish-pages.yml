@@ -1,0 +1,52 @@
+name: Publish app
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: [Update news and videos]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Read only main, never code/artifacts from an untrusted triggering branch.
+      # Publish saved news even when the optional football refresh failed.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check before publication
+        run: |
+          python -m unittest discover -s tests -v
+          node --check app.js
+          node --check install.js
+          node --test tests/*.cjs
+      - uses: actions/configure-pages@v5
+      - name: Stage public files only
+        run: python scripts/package_site.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
