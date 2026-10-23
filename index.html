@@ -4,11 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#b90f25">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Wrexham Reds">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <meta name="description" content="An unofficial Wrexham AFC fan news hub: transfers, injuries, club news, videos and more.">
   <title>Wrexham Reds · Fan News Hub</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
+  <script src="install.js" defer></script>
 </head>
 <body>
   <header class="masthead">
@@ -24,13 +30,20 @@
   </header>
 
   <main class="wrap" id="main">
+    <details class="install-guide" id="installGuide">
+      <summary>Keep Wrexham on your home screen <span aria-hidden="true">＋</span></summary>
+      <p>On your iPhone, open this website in <strong>Safari</strong>. Tap <strong>Share</strong> (or the page menu, then Share), choose <strong>Add to Home Screen</strong>, and tap <strong>Add</strong>. If offered, enable <strong>Open as Web App</strong>.</p>
+      <p>On Android, use your browser’s <strong>Install app</strong> or <strong>Add to Home screen</strong> option when available. An internet connection is needed for news, videos and match updates.</p>
+      <p id="localInstallNote" hidden>For installation, use the <a href="https://fr0st-anno.github.io/wrexham-app/">published Wrexham app</a> on your phone. A file opened on your PC cannot be installed on your iPhone.</p>
+    </details>
     <section class="status-bar" role="status"><div class="status-dot" id="statusDot"></div><div><strong id="statusHeadline">Preview mode</strong><span id="statusMessage">News will populate after the GitHub updater runs.</span></div><div class="status-date" id="updatedAt"></div></section>
 
 
     <section class="matchday-section" id="matchcentre" aria-labelledby="match-heading">
       <div class="section-heading sport-heading"><div><div class="eyebrow">THE MATCH CENTRE</div><h2 id="match-heading">Every minute matters.</h2><p>Upcoming fixtures and recent results. Times appear in your local time zone.</p></div><div class="sport-caption"><span class="pulse-indicator"></span><span id="sports-updated">Match data not connected</span></div></div>
       <div class="fixture-grid"><article class="fixture-panel fixture-next"><div class="sport-card-label">NEXT MATCH</div><div id="nextMatch" class="fixture-content"><div class="skeleton-match">Match information will appear here when the sports feed is connected.</div></div></article><article class="fixture-panel fixture-recent"><div class="sport-card-label">RECENT RESULTS</div><div id="recentResults" class="fixture-content"><p class="sport-empty">Awaiting match results.</p></div></article></div>
-      <div class="sport-linkrow"><span>Source: football-data.org (when enabled) · Free scores may be delayed</span><div><a href="https://www.fotmob.com/teams/9841/overview/wrexham" target="_blank" rel="noopener noreferrer">FotMob ↗</a><a href="https://www.flashscore.dk/" target="_blank" rel="noopener noreferrer">Flashscore ↗</a><a href="https://www.efl.com/how-to-watch/upcoming-tv-games/" target="_blank" rel="noopener noreferrer">EFL TV fixtures ↗</a></div></div>
+      <div class="fixture-panel fixture-recent upcoming-panel"><h3>Upcoming Championship fixtures</h3><div id="upcomingFixtures"></div><div id="pendingMatches"></div></div>
+      <div class="sport-linkrow"><span>Football data provided by the <a href="https://www.football-data.org/" target="_blank" rel="noopener noreferrer">Football-Data.org API</a> · Delayed updates, not live scores</span><div><a href="https://www.fotmob.com/teams/9841/overview/wrexham" target="_blank" rel="noopener noreferrer">FotMob ↗</a><a href="https://www.flashscore.dk/" target="_blank" rel="noopener noreferrer">Flashscore ↗</a><a href="https://www.efl.com/how-to-watch/upcoming-tv-games/" target="_blank" rel="noopener noreferrer">EFL TV fixtures ↗</a></div></div>
     </section>
 
     <section class="club-grid">
