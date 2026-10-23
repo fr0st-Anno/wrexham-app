@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-10-23T06:27:30+00:00",
+  "updated_at": "2026-10-23T12:02:45+00:00",
   "news": [
+    {
+      "id": "345cffb6dbd800a8bd7c1a",
+      "title": "Met Office issues warning to 2,234 Wrexham fans travelling to Blackburn as second storm approaches",
+      "summary": "Wrexham supporters heading to Blackburn Rovers face an unsettled weather outlook after the Met Office issued wind warnings",
+      "url": "https://www.wrexhamreds.com/news/met-office-issues-warning-to-wrexham-fans-travelling-to-blackburn-as-second-storm-approaches/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-23T08:05:17+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "4ea460e78ea5874461b848",
+      "title": "Parkinson has found an answer with 3-4-1-2, now Blackburn will test his conviction",
+      "summary": "🔴 Two strikers, two goals and plenty to think about. Should Parky stick with the 3-4-1-2 at Ewood Park?",
+      "url": "https://www.wrexhamreds.com/features/parkinson-has-found-an-answer-with-3-4-1-2-now-blackburn-will-test-his-conviction/",
+      "source": "Wrexham Reds",
+      "published": "2026-10-23T07:08:19+00:00",
+      "category": "Players"
+    },
     {
       "id": "1aad472d1e23782dd8e854",
       "title": "WATCH: Last time Wrexham travelled to Ewood Park, Rathbone scored this screamer",
@@ -92,24 +110,6 @@
       "category": "Injuries"
     },
     {
-      "id": "4ac663c05bb56ec1fde6dd",
-      "title": "Ben Whiteman sends Wrexham warning despite emphatic Preston victory",
-      "summary": "Wrexham won 4-1, but Ben Whiteman says there is still work to do. Here's what he wants the Red Dragons to improve. 🔴⚪",
-      "url": "https://www.wrexhamreds.com/news/ben-whiteman-sends-wrexham-warning-despite-emphatic-preston-victory/",
-      "source": "Wrexham Reds",
-      "published": "2026-10-20T05:39:00+00:00",
-      "category": "Club"
-    },
-    {
-      "id": "5546b337aa9ae16644795f",
-      "title": "Wrexham’s forgotten teenage record-breaker who made history 44 years ago",
-      "summary": "44 years ago, he made Wrexham history at just 17. His incredible record lasted 20 years before Craig Morgan beat it by two days!",
-      "url": "https://www.wrexhamreds.com/features/wrexhams-forgotten-teenage-record-breaker-who-made-history-44-years-ago/",
-      "source": "Wrexham Reds",
-      "published": "2026-10-19T17:11:10+00:00",
-      "category": "Club"
-    },
-    {
       "id": "d45ed460c9d4ebe9bb1cb3",
       "title": "Whiteman responds to Preston boos as Wrexham ease pressure",
       "summary": "Ben Whiteman looks up with Wrexham in Championship after responding to Preston jeers by scoring against his former club.",
@@ -165,6 +165,11 @@
     }
   ],
   "videos": [
+    {
+      "video_id": "M9Denegqn6w",
+      "title": "PRESS CONFERENCE | Callum Doyle ahead of Blackburn Rovers",
+      "published": "2026-10-23T11:00:23+00:00"
+    },
     {
       "video_id": "ek13bNGpiJE",
       "title": "PRESS CONFERENCE | Phil Parkinson ahead of Blackburn Rovers",
@@ -234,11 +239,6 @@
       "video_id": "NMac2f_kxzQ",
       "title": "TRIPLE A | Wrexham AFC vs West Bromwich Albion",
       "published": "2026-10-15T16:42:29+00:00"
-    },
-    {
-      "video_id": "-msdRAEwc8w",
-      "title": "INTERVIEW | Wrexham AFC Women General Manager Saara Hassoun",
-      "published": "2026-10-14T14:30:30+00:00"
     }
   ],
   "sources": {
@@ -247,6 +247,6 @@
     "BBC Sport Championship": "OK (1 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
-    "Wrexham AFC YouTube": "Unavailable during this update"
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
