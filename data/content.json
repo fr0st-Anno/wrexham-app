@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T16:13:36+00:00",
+  "updated_at": "2026-10-24T18:58:23+00:00",
   "news": [
     {
       "id": "345cffb6dbd800a8bd7c1a",
@@ -166,6 +166,21 @@
   ],
   "videos": [
     {
+      "video_id": "CC9SocXVL9s",
+      "title": "INTERVIEW | Callum O'Hare after Blackburn Rovers",
+      "published": "2026-10-24T17:01:03+00:00"
+    },
+    {
+      "video_id": "HgKsVmVn3co",
+      "title": "INTERVIEW | Phil Parkinson after Blackburn Rovers",
+      "published": "2026-10-24T17:00:27+00:00"
+    },
+    {
+      "video_id": "wFBwgC4OnXY",
+      "title": "HOT TAKE | Blackburn Rovers v Wrexham",
+      "published": "2026-10-24T16:10:09+00:00"
+    },
+    {
       "video_id": "M9Denegqn6w",
       "title": "PRESS CONFERENCE | Callum Doyle ahead of Blackburn Rovers",
       "published": "2026-10-23T11:00:23+00:00"
@@ -224,21 +239,6 @@
       "video_id": "Cvzj8_Ib57E",
       "title": "HOT TAKE | Wrexham v Preston North End",
       "published": "2026-10-17T16:08:57+00:00"
-    },
-    {
-      "video_id": "wrYDm8dk8ro",
-      "title": "PRESS CONFERENCE | Matty James ahead of Preston North End",
-      "published": "2026-10-16T16:41:32+00:00"
-    },
-    {
-      "video_id": "oByOD_LcYF8",
-      "title": "PRESS CONFERENCE | Phil Parkinson ahead of Preston North End",
-      "published": "2026-10-16T13:33:23+00:00"
-    },
-    {
-      "video_id": "NMac2f_kxzQ",
-      "title": "TRIPLE A | Wrexham AFC vs West Bromwich Albion",
-      "published": "2026-10-15T16:42:29+00:00"
     }
   ],
   "sources": {
