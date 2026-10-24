@@ -156,6 +156,9 @@ def main():
     except (urllib.error.URLError, ValueError, TimeoutError, KeyError, TypeError, AttributeError) as exc:
         print('Sports feed unavailable or token lacks access; previous data preserved:', type(exc).__name__, file=sys.stderr)
         code = getattr(exc, 'code', None)
+        # Log only the numeric status: error messages and bodies can contain credentials.
+        if type(code) is int:
+            print(f'Football-data.org HTTP status: {code}', file=sys.stderr)
         health({401: 'unauthorized', 403: 'access_denied', 429: 'rate_limited'}.get(code, 'unavailable'))
         return 1
     return 0

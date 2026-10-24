@@ -62,7 +62,7 @@ class SportsTests(unittest.TestCase):
         self.assertEqual(json.loads(self.health.read_text())['status'], 'not_configured')
 
     def test_http_failures_do_not_leak_or_erase(self):
-        for code, expected in [(401,'unauthorized'),(403,'access_denied'),(429,'rate_limited'),(500,'unavailable')]:
+        for code, expected in [(400,'unavailable'),(401,'unauthorized'),(403,'access_denied'),(404,'unavailable'),(429,'rate_limited'),(500,'unavailable')]:
             err = urllib.error.HTTPError('https://example.test', code, 'test-secret', {}, None)
             log = io.StringIO()
             with patch.object(sports, 'get', side_effect=err), redirect_stderr(log):
@@ -70,6 +70,7 @@ class SportsTests(unittest.TestCase):
             self.assertEqual(self.output.read_text(), self.previous)
             self.assertEqual(json.loads(self.health.read_text())['status'], expected)
             self.assertNotIn('test-secret', log.getvalue()+self.health.read_text())
+            self.assertIn(f'Football-data.org HTTP status: {code}', log.getvalue())
 
     def test_invalid_table_and_mixed_seasons_preserve_snapshot(self):
         for mutate in ['missing_total','missing_number','wrong_season','bad_date','missing_team']:
