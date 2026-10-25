@@ -101,6 +101,36 @@ class SportsTests(unittest.TestCase):
             self.assertNotIn('test-secret', request.full_url)
             self.assertEqual(request.get_header('X-auth-token'), 'test-secret')
 
+    def test_provider_reason_is_classified_without_echoing_secrets(self):
+        cases = [
+            ({'message': 'Your API token is invalid: test-secret'}, 'invalid token'),
+            ({'error': 'Token expired test-secret'}, 'expired token'),
+            ({'message': 'Check your subscription test-secret'}, 'access restriction'),
+            ({'message': 'Invalid parameter test-secret'}, 'request parameters'),
+            ({'message': 'test-secret'}, 'unrecognized provider error'),
+            (['test-secret'], 'unrecognized provider error'),
+        ]
+        for payload, expected in cases:
+            body = io.BytesIO(json.dumps(payload).encode())
+            err = urllib.error.HTTPError('https://example.test/test-secret', 400, 'test-secret', {}, body)
+            log = io.StringIO()
+            with patch.object(sports.urllib.request, 'urlopen', side_effect=err), redirect_stderr(log):
+                self.assertEqual(sports.main(), 1)
+            self.assertIn(expected, log.getvalue())
+            self.assertIn('(standings)', log.getvalue())
+            self.assertNotIn('test-secret', log.getvalue()+self.health.read_text())
+            self.assertEqual(self.output.read_text(), self.previous)
+            self.assertTrue(body.closed)
+
+    def test_unreadable_and_oversized_error_bodies_are_private(self):
+        for raw in [b'<html>test-secret</html>', b'x'*8193+b'test-secret']:
+            err = urllib.error.HTTPError('https://example.test', 400, 'test-secret', {}, io.BytesIO(raw))
+            log = io.StringIO()
+            with redirect_stderr(log):
+                sports.report_http_error(err, '/test-secret')
+            self.assertIn('unrecognized provider error', log.getvalue())
+            self.assertNotIn('test-secret', log.getvalue())
+
 
 if __name__ == '__main__':
     unittest.main()
