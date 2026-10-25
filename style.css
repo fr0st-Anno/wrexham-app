@@ -86,3 +86,21 @@ body{background:#f5f6f8}
   .footer{padding-bottom:max(24px,env(safe-area-inset-bottom))}.install-guide{font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* Compact app header and one section per page. */
+.topbar{min-height:86px;padding:12px 0;border-bottom:0;gap:18px}
+.crest-box{width:43px;height:50px}.identity{gap:10px}.identity h1{font-size:21px}
+.identity p{font-size:11px;margin-top:4px}.identity .eyebrow{font-size:8px;letter-spacing:1px}
+.top-navigation{display:flex;gap:5px}.top-navigation a{padding:10px 9px;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}
+.top-navigation a[aria-current="page"]{background:#fff;color:#920c24}.top-navigation a:hover{background:#ffffff24}
+.top-navigation a[aria-current="page"]:hover{background:#fff}
+#main{min-height:65vh;padding-top:24px;padding-bottom:40px;outline:none}
+#main>.status-bar{margin-top:16px}.install-guide{margin-top:0}
+.club-grid{display:contents}
+#main>[data-page]:not(.status-bar){padding-top:0}
+#main>.matchday-section,#main>.news-section,#main>.transfers-section,#main>.squad-section,#main>.videos-section{padding-top:24px}
+.standings-panel{margin-top:0}.watch-panel{margin-top:24px}.videos-section{margin-top:0;border-top:0}
+.links-section{margin-top:32px;padding-top:24px!important}
+.standings-panel .league-table td{padding:11px 10px}
+@media(max-width:1000px){.topbar{flex-wrap:wrap}.top-navigation{order:3;flex:1 0 100%;justify-content:center;margin:0}.icon-button{margin-left:auto}}
+@media(max-width:700px){.topbar{gap:8px;padding:10px 0}.identity p{display:none}.identity h1{font-size:19px}.top-navigation{justify-content:flex-start;gap:2px;overflow-x:auto}.top-navigation a{font-size:12px;padding:8px 10px}.crest-box{height:43px;width:37px}#main{padding-top:16px}.sport-heading{flex-wrap:wrap}.sport-caption{max-width:100%}}
