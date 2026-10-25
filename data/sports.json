@@ -1,9 +1,514 @@
 {
-  "updated_at": null,
-  "status": "not_configured",
-  "source": null,
-  "standings": [],
-  "fixtures": [],
-  "results": [],
-  "squad": []
+  "updated_at": "2026-10-25T12:51:32+00:00",
+  "source": "football-data.org",
+  "status": "connected",
+  "season": {
+    "start": "2026-08-14",
+    "end": "2027-05-01"
+  },
+  "standings": [
+    {
+      "position": 1,
+      "team": "Middlesbrough",
+      "played": 12,
+      "goal_difference": 10,
+      "points": 25
+    },
+    {
+      "position": 2,
+      "team": "Swansea",
+      "played": 12,
+      "goal_difference": 3,
+      "points": 23
+    },
+    {
+      "position": 3,
+      "team": "West Ham",
+      "played": 12,
+      "goal_difference": 17,
+      "points": 22
+    },
+    {
+      "position": 4,
+      "team": "Wolverhampton",
+      "played": 12,
+      "goal_difference": 4,
+      "points": 21
+    },
+    {
+      "position": 5,
+      "team": "West Brom",
+      "played": 12,
+      "goal_difference": 3,
+      "points": 21
+    },
+    {
+      "position": 6,
+      "team": "Southampton",
+      "played": 12,
+      "goal_difference": 12,
+      "points": 20
+    },
+    {
+      "position": 7,
+      "team": "Birmingham",
+      "played": 12,
+      "goal_difference": 8,
+      "points": 20
+    },
+    {
+      "position": 8,
+      "team": "QPR",
+      "played": 12,
+      "goal_difference": 8,
+      "points": 20
+    },
+    {
+      "position": 9,
+      "team": "Stoke",
+      "played": 12,
+      "goal_difference": 2,
+      "points": 20
+    },
+    {
+      "position": 10,
+      "team": "Blackburn",
+      "played": 12,
+      "goal_difference": 3,
+      "points": 18
+    },
+    {
+      "position": 11,
+      "team": "Portsmouth",
+      "played": 12,
+      "goal_difference": 1,
+      "points": 18
+    },
+    {
+      "position": 12,
+      "team": "Sheffield Utd",
+      "played": 12,
+      "goal_difference": 1,
+      "points": 16
+    },
+    {
+      "position": 13,
+      "team": "Millwall",
+      "played": 12,
+      "goal_difference": -1,
+      "points": 15
+    },
+    {
+      "position": 14,
+      "team": "Bristol City",
+      "played": 12,
+      "goal_difference": -3,
+      "points": 15
+    },
+    {
+      "position": 15,
+      "team": "Lincoln City",
+      "played": 12,
+      "goal_difference": -7,
+      "points": 15
+    },
+    {
+      "position": 16,
+      "team": "Cardiff",
+      "played": 12,
+      "goal_difference": 2,
+      "points": 14
+    },
+    {
+      "position": 17,
+      "team": "Wrexham",
+      "played": 12,
+      "goal_difference": -3,
+      "points": 14
+    },
+    {
+      "position": 18,
+      "team": "Charlton",
+      "played": 12,
+      "goal_difference": -6,
+      "points": 14
+    },
+    {
+      "position": 19,
+      "team": "Bolton",
+      "played": 12,
+      "goal_difference": -7,
+      "points": 14
+    },
+    {
+      "position": 20,
+      "team": "Norwich",
+      "played": 12,
+      "goal_difference": -3,
+      "points": 12
+    },
+    {
+      "position": 21,
+      "team": "Watford",
+      "played": 12,
+      "goal_difference": -10,
+      "points": 11
+    },
+    {
+      "position": 22,
+      "team": "Burnley",
+      "played": 12,
+      "goal_difference": -8,
+      "points": 8
+    },
+    {
+      "position": 23,
+      "team": "Derby County",
+      "played": 12,
+      "goal_difference": -11,
+      "points": 7
+    },
+    {
+      "position": 24,
+      "team": "Preston NE",
+      "played": 12,
+      "goal_difference": -15,
+      "points": 5
+    }
+  ],
+  "fixtures": [
+    {
+      "id": 561916,
+      "home": "Sheffield Utd",
+      "away": "Wrexham",
+      "kickoff": "2026-10-30T20:00:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 561927,
+      "home": "Wrexham",
+      "away": "Middlesbrough",
+      "kickoff": "2026-11-04T19:45:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 561933,
+      "home": "Wrexham",
+      "away": "Wolverhampton",
+      "kickoff": "2026-11-07T12:30:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 561949,
+      "home": "Lincoln City",
+      "away": "Wrexham",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 561959,
+      "home": "Bristol City",
+      "away": "Wrexham",
+      "kickoff": "2026-11-24T19:45:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 561965,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "kickoff": "2026-11-28T15:00:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 561980,
+      "home": "Norwich",
+      "away": "Wrexham",
+      "kickoff": "2026-12-05T15:00:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 561992,
+      "home": "Wrexham",
+      "away": "Charlton",
+      "kickoff": "2026-12-08T19:45:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
+    }
+  ],
+  "results": [
+    {
+      "id": 561902,
+      "home": "Blackburn",
+      "away": "Wrexham",
+      "kickoff": "2026-10-24T14:00:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "id": 561892,
+      "home": "Wrexham",
+      "away": "Preston NE",
+      "kickoff": "2026-10-17T14:00:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 4,
+      "away_score": 1
+    },
+    {
+      "id": 561870,
+      "home": "Wrexham",
+      "away": "West Brom",
+      "kickoff": "2026-10-13T18:45:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "id": 561864,
+      "home": "Derby County",
+      "away": "Wrexham",
+      "kickoff": "2026-10-10T14:00:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "id": 561846,
+      "home": "Wrexham",
+      "away": "Southampton",
+      "kickoff": "2026-09-19T14:00:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "id": 561842,
+      "home": "West Ham",
+      "away": "Wrexham",
+      "kickoff": "2026-09-11T19:00:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 6,
+      "away_score": 0
+    },
+    {
+      "id": 561830,
+      "home": "Wrexham",
+      "away": "Burnley",
+      "kickoff": "2026-09-08T18:45:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "id": 561811,
+      "home": "Swansea",
+      "away": "Wrexham",
+      "kickoff": "2026-09-05T19:00:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 0,
+      "away_score": 0
+    }
+  ],
+  "pending": [],
+  "squad": [
+    {
+      "name": "Danny Ward",
+      "position": "Goalkeeper",
+      "nationality": "Wales",
+      "dob": "1993-06-22"
+    },
+    {
+      "name": "Callum Burton",
+      "position": "Goalkeeper",
+      "nationality": "England",
+      "dob": "1996-08-15"
+    },
+    {
+      "name": "Anthony Patterson",
+      "position": "Goalkeeper",
+      "nationality": "England",
+      "dob": "2000-05-10"
+    },
+    {
+      "name": "Liberato Cacace",
+      "position": "Defence",
+      "nationality": "New Zealand",
+      "dob": "2000-09-27"
+    },
+    {
+      "name": "Dominic Hyam",
+      "position": "Defence",
+      "nationality": "Scotland",
+      "dob": "1995-12-20"
+    },
+    {
+      "name": "Zak Vyner",
+      "position": "Defence",
+      "nationality": "England",
+      "dob": "1997-05-14"
+    },
+    {
+      "name": "Joe Worrall",
+      "position": "Defence",
+      "nationality": "England",
+      "dob": "1997-01-10"
+    },
+    {
+      "name": "Issa Kaboré",
+      "position": "Defence",
+      "nationality": "Burkina Faso",
+      "dob": "2001-05-12"
+    },
+    {
+      "name": "Max Cleworth",
+      "position": "Defence",
+      "nationality": "Wales",
+      "dob": "2002-08-09"
+    },
+    {
+      "name": "Callum Doyle",
+      "position": "Defence",
+      "nationality": "England",
+      "dob": "2003-10-03"
+    },
+    {
+      "name": "Jacques Ekomie",
+      "position": "Defence",
+      "nationality": "Gabon",
+      "dob": "2003-08-19"
+    },
+    {
+      "name": "Sebastian Revan",
+      "position": "Defence",
+      "nationality": "England",
+      "dob": "2003-07-14"
+    },
+    {
+      "name": "Aaron James",
+      "position": "Defence",
+      "nationality": "England",
+      "dob": "2005-06-30"
+    },
+    {
+      "name": "Danny Imray",
+      "position": "Defence",
+      "nationality": "England",
+      "dob": "2003-07-27"
+    },
+    {
+      "name": "Callum O'Hare",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1998-05-01"
+    },
+    {
+      "name": "Oliver Rathbone",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1996-10-10"
+    },
+    {
+      "name": "George Dobson",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1997-11-15"
+    },
+    {
+      "name": "Ben Whiteman",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1996-06-17"
+    },
+    {
+      "name": "Ben Sheaf",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1998-02-05"
+    },
+    {
+      "name": "Matty James",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1991-07-22"
+    },
+    {
+      "name": "Lewis O'Brien",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1998-10-14"
+    },
+    {
+      "name": "Josh Windass",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "1994-01-09"
+    },
+    {
+      "name": "Ryan Longman",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "2000-11-06"
+    },
+    {
+      "name": "George Thomason",
+      "position": "Midfield",
+      "nationality": "England",
+      "dob": "2002-01-12"
+    },
+    {
+      "name": "Sam Smith",
+      "position": "Offence",
+      "nationality": "England",
+      "dob": "1998-03-08"
+    },
+    {
+      "name": "Kieffer Moore",
+      "position": "Offence",
+      "nationality": "Wales",
+      "dob": "1992-08-08"
+    },
+    {
+      "name": "Nathan Broadhead",
+      "position": "Offence",
+      "nationality": "Wales",
+      "dob": "1998-04-05"
+    },
+    {
+      "name": "Bailey Cadamarteri",
+      "position": "Offence",
+      "nationality": "Jamaica",
+      "dob": "2005-05-09"
+    }
+  ]
 }
