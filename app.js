@@ -103,7 +103,7 @@ function updateCategory(){document.querySelectorAll('[data-category]').forEach(b
 async function start(){const crest=$('#crest');crest.addEventListener('error',()=>crest.parentElement.classList.add('missing'));renderSources();renderStatus();renderStories();renderVideos();
   document.querySelectorAll('[data-category]').forEach(btn=>btn.addEventListener('click',()=>{filter=btn.dataset.category;savedOnly=false;updateCategory();renderStories()}));
   $('#searchInput').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();renderStories()});
-  $('#bookmarksBtn').addEventListener('click',()=>{savedOnly=!savedOnly;$('#stories').scrollIntoView({behavior:'smooth'});renderStories()});
+  $('#bookmarksBtn').addEventListener('click',()=>{savedOnly=!savedOnly;window.navigatePage('news');renderStories()});
   $('#playerClose').addEventListener('click',()=>$('#playerDialog').close());
   $('#playerDialog').addEventListener('close',()=>{$('#playerFrame').src='about:blank'});
   try{const response=await fetch(DATA_URL,{cache:'no-store'});if(!response.ok)throw Error('No data yet');const incoming=await response.json();if(!Array.isArray(incoming.news)||!Array.isArray(incoming.videos))throw Error('Invalid news data');data=incoming;renderStatus();renderStories();renderVideos();window.dispatchEvent(new Event("wrexham-news-updated"))}catch(err){$('#statusMessage').textContent=location.protocol==='file:'?'Local preview: automatic news works after GitHub publication.':'No published news yet. Run the GitHub feed updater to populate headlines.'}
@@ -143,7 +143,7 @@ function tablePanel(){const target=$('#standingsBody');target.replaceChildren();
 }
 function squadPanel(){const target=$('#squadGrid');target.replaceChildren();const search=$('#playerSearch').value.trim().toLowerCase();const list=(sports.squad||[]).filter(p=>String(p.name||'').toLowerCase().includes(search));if(!list.length){safeText(target,'div','sport-empty-card',search?'No matching player found.':'The player roster will load if the football data provider makes squad information available.');return}
   for(const p of list){const tile=el('article','player-tile');const initials=(p.name||'W').split(/\s+/).slice(0,2).map(n=>n[0]).join('').toUpperCase();safeText(tile,'div','player-portrait',initials);safeText(tile,'div','player-position',p.position||'Player');safeText(tile,'h3','',p.name||'Player');safeText(tile,'p','',p.nationality||'Nationality unavailable');if(p.dob){const age=Math.floor((Date.now()-new Date(p.dob).getTime())/(365.25*864e5));if(age>=15&&age<55)safeText(tile,'p','',`Age: ${age}`)}
-    const btn=safeText(tile,'button','','Find news ↗');btn.addEventListener('click',()=>{$('#searchInput').value=p.name;query=p.name.toLowerCase();filter='All';savedOnly=false;updateCategory();renderStories();$('#stories').scrollIntoView({behavior:'smooth'})});target.append(tile)
+    const btn=safeText(tile,'button','','Find news ↗');btn.addEventListener('click',()=>{$('#searchInput').value=p.name;query=p.name.toLowerCase();filter='All';savedOnly=false;updateCategory();renderStories();window.navigatePage('news')});target.append(tile)
   }
 }
 function transferPanel(){const target=$('#transferList');target.replaceChildren();const transfers=(data.news||[]).filter(n=>n.category==='Transfers').slice(0,7);if(!transfers.length){safeText(target,'div','sport-empty-card','Transfer news will appear here when related reports arrive in the news feeds. No deals are labelled official without verification.');return}
