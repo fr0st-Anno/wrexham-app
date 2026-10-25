@@ -19,6 +19,31 @@ TOKEN = os.environ.get('FOOTBALL_DATA_TOKEN', '').strip()
 ROOT = 'https://api.football-data.org/v4'
 
 
+def report_http_error(error, endpoint):
+    """Classify a bounded error body without ever printing provider-controlled text."""
+    resource = {'/competitions/ELC/standings': 'standings',
+                '/competitions/ELC/matches': 'matches'}.get(endpoint, 'team details')
+    reason = 'unrecognized provider error'
+    try:
+        raw = error.read(8193)
+        if len(raw) <= 8192:
+            payload = json.loads(raw)
+            message = payload.get('message', payload.get('error', '')) if isinstance(payload, dict) else ''
+            if isinstance(message, str):
+                message = message.lower()
+                if 'token' in message and 'invalid' in message:
+                    reason = 'provider reports an invalid token'
+                elif 'token' in message and 'expired' in message:
+                    reason = 'provider reports an expired token'
+                elif 'subscription' in message or 'restricted resource' in message:
+                    reason = 'provider reports an access restriction'
+                elif 'parameter' in message or 'filter' in message:
+                    reason = 'provider reports invalid request parameters'
+    except (ValueError, OSError, AttributeError, TypeError):
+        pass
+    print(f'Football request failed ({resource}): {reason}.', file=sys.stderr)
+
+
 def get(endpoint):
     if not TOKEN:
         raise RuntimeError('No API token available')
@@ -27,12 +52,17 @@ def get(endpoint):
         headers={'X-Auth-Token': TOKEN, 'Accept': 'application/json',
                  'User-Agent': 'WrexhamReds-FanHub/1.4 (Championship match-data reader)'},
     )
-    with urllib.request.urlopen(request, timeout=25) as response:
-        if response.status != 200:
-            raise ValueError(f'Remote service HTTP {response.status}')
-        raw = response.read(2_000_000)
-        if len(raw) >= 2_000_000:
-            raise ValueError('Response too large')
+    try:
+        with urllib.request.urlopen(request, timeout=25) as response:
+            if response.status != 200:
+                raise ValueError(f'Remote service HTTP {response.status}')
+            raw = response.read(2_000_000)
+            if len(raw) >= 2_000_000:
+                raise ValueError('Response too large')
+    except urllib.error.HTTPError as error:
+        report_http_error(error, endpoint)
+        error.close()
+        raise
     return json.loads(raw)
 
 
