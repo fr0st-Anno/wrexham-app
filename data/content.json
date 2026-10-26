@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T07:43:55+00:00",
+  "updated_at": "2026-10-26T15:08:06+00:00",
   "news": [
     {
       "id": "68199c0c58d8bb172ff1d2",
@@ -157,6 +157,16 @@
   ],
   "videos": [
     {
+      "video_id": "-3iQ1fih5ZA",
+      "title": "INTERVIEW | Maria Francis-Jones after Barry Town United",
+      "published": "2026-10-26T11:00:34+00:00"
+    },
+    {
+      "video_id": "wD8UG_gTAMU",
+      "title": "INTERVIEW | Jenny Sugarman after Barry Town United",
+      "published": "2026-10-26T09:00:14+00:00"
+    },
+    {
       "video_id": "OoB8GSk6GUM",
       "title": "HIGHLIGHTS | Barry Town United vs Wrexham AFC Women",
       "published": "2026-10-25T21:05:32+00:00"
@@ -220,16 +230,6 @@
       "video_id": "QlToO4iqCeY",
       "title": "HOT TAKE | Wrexham v Cardiff Met",
       "published": "2026-10-18T15:43:57+00:00"
-    },
-    {
-      "video_id": "Yf12XXP4MSM",
-      "title": "Wrexham Match Day Live - Wrexham vs Preston North End",
-      "published": "2026-10-18T04:55:14+00:00"
-    },
-    {
-      "video_id": "0OWXNEY86kM",
-      "title": "INTERVIEW | Ben Whiteman after Preston North End",
-      "published": "2026-10-17T17:27:26+00:00"
     }
   ],
   "sources": {
