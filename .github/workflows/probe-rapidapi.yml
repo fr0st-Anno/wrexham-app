@@ -1,0 +1,21 @@
+name: Test RapidAPI squad access
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rapidapi-manual-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Wrexham squad capabilities (maximum two requests)
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        run: python scripts/probe_rapidapi.py
