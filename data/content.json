@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T15:08:06+00:00",
+  "updated_at": "2026-10-26T18:24:37+00:00",
   "news": [
     {
       "id": "68199c0c58d8bb172ff1d2",
@@ -157,6 +157,11 @@
   ],
   "videos": [
     {
+      "video_id": "v4JjlxgPfr4",
+      "title": "TRIPLE A | Blackburn Rovers VS Wrexham AFC",
+      "published": "2026-10-26T15:29:07+00:00"
+    },
+    {
       "video_id": "-3iQ1fih5ZA",
       "title": "INTERVIEW | Maria Francis-Jones after Barry Town United",
       "published": "2026-10-26T11:00:34+00:00"
@@ -225,11 +230,6 @@
       "video_id": "Ot-ZYW5JuRE",
       "title": "HIGHLIGHTS | Wrexham AFC Women vs Cardiff Met",
       "published": "2026-10-18T21:06:10+00:00"
-    },
-    {
-      "video_id": "QlToO4iqCeY",
-      "title": "HOT TAKE | Wrexham v Cardiff Met",
-      "published": "2026-10-18T15:43:57+00:00"
     }
   ],
   "sources": {
