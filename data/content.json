@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T01:39:14+00:00",
+  "updated_at": "2026-10-26T07:43:55+00:00",
   "news": [
     {
       "id": "68199c0c58d8bb172ff1d2",
@@ -119,15 +119,6 @@
       "category": "Injuries"
     },
     {
-      "id": "d45ed460c9d4ebe9bb1cb3",
-      "title": "Whiteman responds to Preston boos as Wrexham ease pressure",
-      "summary": "Ben Whiteman looks up with Wrexham in Championship after responding to Preston jeers by scoring against his former club.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/c574pdzjjkmxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-10-18T14:40:35+00:00",
-      "category": "Club"
-    },
-    {
       "id": "f2bd8fa27c2a129d1d2e11",
       "title": "Cardiff & Wrexham win big but TNS top Adran Premier",
       "summary": "Cardiff score 10 while Wrexham net eight but The New Saints maintain their perfect start and top spot in the Adran Premier.",
@@ -243,10 +234,10 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (8 relevant items)",
+    "BBC Welsh Football": "OK (7 relevant items)",
     "BBC Sport Championship": "OK (0 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
-    "Wrexham AFC YouTube": "Unavailable during this update"
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
