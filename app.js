@@ -78,11 +78,35 @@ function renderStories(){
   }
 }
 function openVideo(video){const id=video.video_id;if(!/^[a-zA-Z0-9_-]{11}$/.test(id||''))return;let dialog=$('#playerDialog');$('#playerTitle').textContent=video.title||'Wrexham AFC video';$('#playerFrame').src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1` ;$('#externalVideo').href=`https://www.youtube.com/watch?v=${encodeURIComponent(id)}`;if(typeof dialog.showModal==='function'){dialog.showModal()}else{window.open($('#externalVideo').href,'_blank','noopener')}}
+const VIDEO_CATEGORIES = ['All', 'Interviews', 'Highlights', 'Press Conferences', 'Hot Takes', 'Behind the Scenes', 'Matchday', 'Other'];
+let videoFilter = 'All';
+function videoCategory(video){
+  const title = String(video.title || '').toLowerCase();
+  if (/\bpress\s+conference\b/.test(title)) return 'Press Conferences';
+  if (/\bhighlights?\b/.test(title)) return 'Highlights';
+  if (/\bhot[\s-]*takes?\b/.test(title)) return 'Hot Takes';
+  if (/\binterviews?\b/.test(title)) return 'Interviews';
+  if (/\b(triple\s+a|behind\s+the\s+scenes|training|pov)\b/.test(title)) return 'Behind the Scenes';
+  if (/\b(match\s*day|live|y\s+chwiban\s+terfynol)\b/.test(title)) return 'Matchday';
+  return 'Other';
+}
+function filteredVideos(videos, category){
+  return category === 'All' ? videos : videos.filter(video => videoCategory(video) === category);
+}
 function renderVideos(){
   const list=$('#videoList');list.replaceChildren();
-  const videos=demoMode()?DEMO_VIDEOS:data.videos;
+  const allVideos=demoMode()?DEMO_VIDEOS:data.videos;
+  const videos=filteredVideos(allVideos, videoFilter);
+  document.querySelectorAll('[data-video-category]').forEach(button=>{
+    const category=button.dataset.videoCategory;
+    const selected=category===videoFilter;
+    button.textContent=`${category==='All'?'All videos':category} (${filteredVideos(allVideos,category).length})`;
+    button.classList.toggle('active',selected);
+    button.setAttribute('aria-pressed',String(selected));
+  });
+  $('#videoCount').textContent=`${videos.length} ${videos.length===1?'video':'videos'} · ${videoFilter==='All'?'All categories':videoFilter}`;
   if(!videos.length){
-    const card=el('div','empty');card.append(el('h3','','No recent uploads yet'),el('p','','Videos will appear here once the YouTube feed is connected.'));
+    const card=el('div','empty');card.append(el('h3','',videoFilter==='All'?'No recent uploads yet':`No ${videoFilter.toLowerCase()} in the latest uploads`),el('p','','Choose All videos or visit the official channel for older uploads.'));
     const a=el('a','','Open the official YouTube channel ↗');a.href='https://www.youtube.com/@WxmAFCofficial';a.target='_blank';a.rel='noopener noreferrer';card.append(a);list.append(card);return;
   }
   for (const video of videos){
@@ -94,16 +118,17 @@ function renderVideos(){
       const btn=el('button','video-cover');btn.setAttribute('aria-label',`Play ${video.title||'video'}`);
       const thumb=el('img');thumb.alt='';thumb.loading='lazy';thumb.src=`https://i.ytimg.com/vi/${encodeURIComponent(video.video_id)}/hqdefault.jpg`;
       btn.append(thumb,el('span','play-icon','▶'));btn.addEventListener('click',()=>openVideo(video));
-      const info=el('div','video-info');info.append(el('strong','',video.title||'Wrexham video'),el('small','',`Wrexham AFC · ${shortDate(video.published)}`));card.append(btn,info);
+      const info=el('div','video-info');info.append(el('span','pill',videoCategory(video)),el('strong','',video.title||'Wrexham video'),el('small','',`Wrexham AFC · ${shortDate(video.published)}`));card.append(btn,info);
     }
     list.append(card);
   }
 }
 function updateCategory(){document.querySelectorAll('[data-category]').forEach(btn=>{let selected=btn.dataset.category===filter;btn.classList.toggle('active',selected);btn.setAttribute('aria-pressed',String(selected))})}
 async function start(){const crest=$('#crest');crest.addEventListener('error',()=>crest.parentElement.classList.add('missing'));renderSources();renderStatus();renderStories();renderVideos();
+  document.querySelectorAll('[data-video-category]').forEach(button=>button.addEventListener('click',()=>{videoFilter=button.dataset.videoCategory;renderVideos()}));
   document.querySelectorAll('[data-category]').forEach(btn=>btn.addEventListener('click',()=>{filter=btn.dataset.category;savedOnly=false;updateCategory();renderStories()}));
   $('#searchInput').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();renderStories()});
-  $('#bookmarksBtn').addEventListener('click',()=>{savedOnly=!savedOnly;$('#stories').scrollIntoView({behavior:'smooth'});renderStories()});
+  $('#bookmarksBtn').addEventListener('click',()=>{savedOnly=!savedOnly;window.navigatePage('news');renderStories()});
   $('#playerClose').addEventListener('click',()=>$('#playerDialog').close());
   $('#playerDialog').addEventListener('close',()=>{$('#playerFrame').src='about:blank'});
   try{const response=await fetch(DATA_URL,{cache:'no-store'});if(!response.ok)throw Error('No data yet');const incoming=await response.json();if(!Array.isArray(incoming.news)||!Array.isArray(incoming.videos))throw Error('Invalid news data');data=incoming;renderStatus();renderStories();renderVideos();window.dispatchEvent(new Event("wrexham-news-updated"))}catch(err){$('#statusMessage').textContent=location.protocol==='file:'?'Local preview: automatic news works after GitHub publication.':'No published news yet. Run the GitHub feed updater to populate headlines.'}
@@ -143,7 +168,7 @@ function tablePanel(){const target=$('#standingsBody');target.replaceChildren();
 }
 function squadPanel(){const target=$('#squadGrid');target.replaceChildren();const search=$('#playerSearch').value.trim().toLowerCase();const list=(sports.squad||[]).filter(p=>String(p.name||'').toLowerCase().includes(search));if(!list.length){safeText(target,'div','sport-empty-card',search?'No matching player found.':'The player roster will load if the football data provider makes squad information available.');return}
   for(const p of list){const tile=el('article','player-tile');const initials=(p.name||'W').split(/\s+/).slice(0,2).map(n=>n[0]).join('').toUpperCase();safeText(tile,'div','player-portrait',initials);safeText(tile,'div','player-position',p.position||'Player');safeText(tile,'h3','',p.name||'Player');safeText(tile,'p','',p.nationality||'Nationality unavailable');if(p.dob){const age=Math.floor((Date.now()-new Date(p.dob).getTime())/(365.25*864e5));if(age>=15&&age<55)safeText(tile,'p','',`Age: ${age}`)}
-    const btn=safeText(tile,'button','','Find news ↗');btn.addEventListener('click',()=>{$('#searchInput').value=p.name;query=p.name.toLowerCase();filter='All';savedOnly=false;updateCategory();renderStories();$('#stories').scrollIntoView({behavior:'smooth'})});target.append(tile)
+    const btn=safeText(tile,'button','','Find news ↗');btn.addEventListener('click',()=>{$('#searchInput').value=p.name;query=p.name.toLowerCase();filter='All';savedOnly=false;updateCategory();renderStories();window.navigatePage('news')});target.append(tile)
   }
 }
 function transferPanel(){const target=$('#transferList');target.replaceChildren();const transfers=(data.news||[]).filter(n=>n.category==='Transfers').slice(0,7);if(!transfers.length){safeText(target,'div','sport-empty-card','Transfer news will appear here when related reports arrive in the news feeds. No deals are labelled official without verification.');return}
