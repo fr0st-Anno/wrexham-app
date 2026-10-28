@@ -6,6 +6,20 @@ from scripts import probe_rapidapi as probe
 
 
 class ProbeTests(unittest.TestCase):
+    def test_structure_omits_values_and_sensitive_field_names(self):
+        payload = {'data': [{'name':'Private Name', 'stats': {'score':7.2}}],
+                   'apiToken':'private-token', 'MYSECRET':'hidden', 'bad\nfield':'hidden'}
+        result = probe.structure(payload, 'MYSECRET')
+        text = str(result)
+        for value in ['Private Name', '7.2', 'private-token', 'apiToken', 'MYSECRET', 'hidden', 'bad\nfield']:
+            self.assertNotIn(value, text)
+        self.assertIn({'path':'$.data[].stats.score', 'type':'number'}, result)
+
+    def test_structure_is_bounded_and_handles_scalar_response(self):
+        self.assertEqual(probe.structure('private response', ''), [{'path':'$', 'type':'string'}])
+        payload = {f'field{i}': [{f'nested{j}': j for j in range(50)}] for i in range(50)}
+        self.assertLessEqual(len(probe.structure(payload, '')), 120)
+
     def test_exact_team_only(self):
         data = {'data': [{'name':'Wrexham AFC','id':123}, {'name':'Wrexham Women','id':456}]}
         self.assertEqual(probe.wrexham_ids(data), {'123'})
@@ -55,3 +69,4 @@ class ProbeTests(unittest.TestCase):
         self.assertEqual(get.call_args.args, ('/football-get-player-detail', {'playerid':'42'}))
         self.assertNotIn('private-value', output.getvalue())
         self.assertNotIn('test-secret', output.getvalue())
+
