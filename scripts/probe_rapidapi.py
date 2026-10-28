@@ -92,6 +92,32 @@ def player_candidates(payload, known_squad):
     return sorted((name, next(iter(ids))) for name, ids in found.items() if len(ids) == 1)
 
 
+def structure(payload, secret):
+    """Bounded schema sample only; never include scalar values."""
+    rows = []
+    def visit(value, path='$', depth=0):
+        if len(rows) >= 120:
+            return
+        kind = ('null' if value is None else 'object' if isinstance(value, dict)
+                else 'array' if isinstance(value, list) else 'boolean' if isinstance(value, bool)
+                else 'number' if isinstance(value, (int, float)) else 'string')
+        rows.append({'path': path, 'type': kind})
+        if depth >= 6:
+            return
+        if isinstance(value, dict):
+            for field, child in list(value.items())[:40]:
+                if (not isinstance(field, str) or not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]{0,47}', field)
+                        or (secret and secret.casefold() in field.casefold())
+                        or re.search(r'key|token|secret|auth|password|cookie', field, re.I)):
+                    continue
+                visit(child, path + '.' + field, depth + 1)
+        elif isinstance(value, list):
+            for child in value[:2]:
+                visit(child, path + '[]', depth + 1)
+    visit(payload)
+    return rows
+
+
 def main():
     key = os.environ.get('RAPIDAPI_KEY', '').strip()
     if not key:
@@ -114,6 +140,7 @@ def main():
             print('Stopped: no unambiguous player match. No player detail request made.')
             return 1
         detail = client.get('/football-get-player-detail', {'playerid': matches[0][1]})
+        print('Player detail structure (bounded sample; values omitted):', json.dumps(structure(detail, key)))
         print('One player detail response received. Populated candidate fields:', json.dumps(summarize(detail), sort_keys=True))
         print('Field detection only; does not verify current season, rating source, image availability or reuse rights.')
         print('Requests used:', client.calls)
@@ -129,3 +156,4 @@ def main():
 
 if __name__ == '__main__':
     raise SystemExit(main())
+
