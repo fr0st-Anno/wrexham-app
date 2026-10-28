@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check Wrexham squad capabilities (maximum two requests)
+      - name: Check Wrexham squad capabilities (maximum three requests)
         env:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: python scripts/probe_rapidapi.py
