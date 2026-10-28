@@ -1,13 +1,14 @@
-"""Manual, at-most-two-call capability probe. No API responses are saved."""
+"""Manual, at-most-three-call capability probe. No API responses are saved."""
 import json
 import os
 import re
+from pathlib import Path
 import urllib.error
 import urllib.parse
 import urllib.request
 
 HOST = 'free-api-live-football-data.p.rapidapi.com'
-ALLOWED = {'/football-teams-search', '/football-get-list-player'}
+ALLOWED = {'/football-teams-search', '/football-get-list-player', '/football-get-player-detail'}
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -22,7 +23,7 @@ class Client:
         self.opener = urllib.request.build_opener(NoRedirect())
 
     def get(self, path, params):
-        if path not in ALLOWED or self.calls >= 2:
+        if path not in ALLOWED or self.calls >= 3:
             raise ValueError('Probe boundary')
         self.calls += 1
         request = urllib.request.Request(
@@ -76,6 +77,21 @@ def summarize(payload):
     return counts
 
 
+
+def player_candidates(payload, known_squad):
+    # Cross-check full names against our existing football-data roster.
+    known = {p.get('name', '').casefold().strip() for p in known_squad
+             if isinstance(p, dict) and isinstance(p.get('name'), str)}
+    found = {}
+    for row in records(payload):
+        name = row.get('name', row.get('playerName'))
+        identifier = row.get('id', row.get('playerId'))
+        if (isinstance(name, str) and name.casefold().strip() in known
+                and re.fullmatch(r'[0-9]{1,10}', str(identifier or ''))):
+            found.setdefault(name.casefold().strip(), set()).add(str(identifier))
+    return sorted((name, next(iter(ids))) for name, ids in found.items() if len(ids) == 1)
+
+
 def main():
     key = os.environ.get('RAPIDAPI_KEY', '').strip()
     if not key:
@@ -91,13 +107,21 @@ def main():
             return 1
         squad = client.get('/football-get-list-player', {'teamid': next(iter(candidates))})
         print('Squad response received. Populated candidate fields:', json.dumps(summarize(squad), sort_keys=True))
+        roster = json.loads((Path(__file__).resolve().parents[1] / 'data/sports.json').read_text(encoding='utf-8'))
+        matches = player_candidates(squad, roster.get('squad', []))
+        print('Players matching existing roster:', len(matches))
+        if not matches:
+            print('Stopped: no unambiguous player match. No player detail request made.')
+            return 1
+        detail = client.get('/football-get-player-detail', {'playerid': matches[0][1]})
+        print('One player detail response received. Populated candidate fields:', json.dumps(summarize(detail), sort_keys=True))
         print('Field detection only; does not verify current season, rating source, image availability or reuse rights.')
         print('Requests used:', client.calls)
         return 0
     except urllib.error.HTTPError as error:
         print('API request failed. HTTP status:', error.code)
         error.close()
-    except (urllib.error.URLError, ValueError, TypeError, TimeoutError, RecursionError):
+    except (urllib.error.URLError, ValueError, TypeError, TimeoutError, RecursionError, OSError):
         print('API request failed or returned an unsupported response. No response contents logged.')
     print('Requests attempted:', client.calls)
     return 1
