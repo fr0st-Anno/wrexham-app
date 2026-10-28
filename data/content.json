@@ -1,6 +1,33 @@
 {
-  "updated_at": "2026-10-28T13:29:50+00:00",
+  "updated_at": "2026-10-28T19:05:07+00:00",
   "news": [
+    {
+      "id": "3d71c8c9a775f2d86ea2b3",
+      "title": "Wrexham fined for fielding ineligible players",
+      "summary": "The English Football League fines Wrexham £75k for two instances of fielding ineligible players.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cr89z5pj5n2zo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-28T18:22:42+00:00",
+      "category": "Players"
+    },
+    {
+      "id": "47916b96ce0cbbdbbc615f",
+      "title": "EFL latest: Burnley name new boss, Wrexham fined over ineligible players",
+      "summary": "",
+      "url": "https://www.skysports.com/football/live-blog/11095/13163353/championship-news-transfer-latest-and-gossip-plus-efl-updates-from-league-one-and-league-two",
+      "source": "Sky Sports",
+      "published": "2026-10-28T18:02:00+00:00",
+      "category": "Players"
+    },
+    {
+      "id": "1f4b772daa4cf5721e9734",
+      "title": "Unlucky seven? Wrexham aim to buck bizarre trend",
+      "summary": "Phil Parkinson hopes his Wrexham side can buck the trend of Championship teams struggling in seasons after finishing in seventh in the second tier.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cq3djl59gdz2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-28T13:56:28+00:00",
+      "category": "Club"
+    },
     {
       "id": "68199c0c58d8bb172ff1d2",
       "title": "Wrexham beat Barry Town to stay top of Adran Premier",
@@ -157,6 +184,11 @@
   ],
   "videos": [
     {
+      "video_id": "uBTR9-JpyuM",
+      "title": "PRESS CONFERENCE | Phil Parkinson ahead of Sheffield United",
+      "published": "2026-10-28T17:01:02+00:00"
+    },
+    {
       "video_id": "v4JjlxgPfr4",
       "title": "TRIPLE A | Blackburn Rovers VS Wrexham AFC",
       "published": "2026-10-26T15:29:07+00:00"
@@ -225,19 +257,14 @@
       "video_id": "FXidCLOg0Mg",
       "title": "TRIPLE A | Wrexham AFC vs Preston North End",
       "published": "2026-10-19T20:00:33+00:00"
-    },
-    {
-      "video_id": "Ot-ZYW5JuRE",
-      "title": "HIGHLIGHTS | Wrexham AFC Women vs Cardiff Met",
-      "published": "2026-10-18T21:06:10+00:00"
     }
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (7 relevant items)",
-    "BBC Sport Championship": "OK (0 relevant items)",
-    "BBC Sport": "OK (0 relevant items)",
-    "Sky Sports": "OK (0 relevant items)",
+    "BBC Welsh Football": "OK (9 relevant items)",
+    "BBC Sport Championship": "OK (1 relevant items)",
+    "BBC Sport": "OK (2 relevant items)",
+    "Sky Sports": "OK (1 relevant items)",
     "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
