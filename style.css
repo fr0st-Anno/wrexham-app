@@ -85,6 +85,11 @@ body{background:#f5f6f8}
   .wrap{width:auto;margin-left:max(14px,env(safe-area-inset-left));margin-right:max(14px,env(safe-area-inset-right))}
   .footer{padding-bottom:max(24px,env(safe-area-inset-bottom))}.install-guide{font-size:14px}
 }
+/* Let phone filters flow onto new rows instead of shrinking their labels. */
+@media(max-width:700px){
+  .tabs{flex-wrap:wrap;overflow:visible}
+  .tabs .tab{flex:0 0 auto;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
 /* Compact app header and one section per page. */
