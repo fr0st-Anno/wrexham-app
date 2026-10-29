@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T09:49:57+00:00",
+  "updated_at": "2026-10-29T16:52:55+00:00",
   "news": [
     {
       "id": "3d71c8c9a775f2d86ea2b3",
@@ -7,8 +7,17 @@
       "summary": "The English Football League fines Wrexham £75k for two instances of fielding ineligible players.",
       "url": "https://www.bbc.co.uk/sport/football/articles/cr89z5pj5n2zo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Welsh Football",
-      "published": "2026-10-28T18:22:42+00:00",
+      "published": "2026-10-29T13:40:27+00:00",
       "category": "Players"
+    },
+    {
+      "id": "44d431dd09f6e16e5c6512",
+      "title": "Wrexham urged to board Championship rollercoaster",
+      "summary": "Joe Worrall says Wrexham have the required \"golden triangle\" when it comes to their quest to gain promotion to the Premier League.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c6jrw9g43n2do?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-29T12:17:18+00:00",
+      "category": "Club"
     },
     {
       "id": "1f4b772daa4cf5721e9734",
@@ -92,15 +101,6 @@
       "category": "Club"
     },
     {
-      "id": "05b6f0f466d2faeab502c0",
-      "title": "Parkinson's gratitude as Wrexham boss hits landmark",
-      "summary": "Phil Parkinson praised Wrexham's \"togetherness\" as he became the second-longest serving manager in the English Football League.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cqlye4p71l0zo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-10-22T13:16:55+00:00",
-      "category": "Club"
-    },
-    {
       "id": "ab6635968d54850656c3e9",
       "title": "Paul Mullin reveals the Wrexham promotion memory that still means more than any other moment",
       "summary": "❤️ Paul Mullin has enjoyed some incredible Wrexham moments, but there's one night he says will never be beaten.",
@@ -137,15 +137,6 @@
       "category": "Injuries"
     },
     {
-      "id": "f2bd8fa27c2a129d1d2e11",
-      "title": "Cardiff & Wrexham win big but TNS top Adran Premier",
-      "summary": "Cardiff score 10 while Wrexham net eight but The New Saints maintain their perfect start and top spot in the Adran Premier.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cmx23enye615o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-10-11T15:46:04+00:00",
-      "category": "Matches"
-    },
-    {
       "id": "ad8ecc95d02022f11bc8a8",
       "title": "Wrexham's Kop: The project matching the club's rise",
       "summary": "Wrexham's new Kop stand a signal of their ambition to keep climbing from the Championship to the Premier League.",
@@ -174,6 +165,11 @@
     }
   ],
   "videos": [
+    {
+      "video_id": "2x7BF3rAnyw",
+      "title": "PRESS CONFERENCE | Joe Worrall ahead of Sheffield United",
+      "published": "2026-10-29T13:43:27+00:00"
+    },
     {
       "video_id": "uBTR9-JpyuM",
       "title": "PRESS CONFERENCE | Phil Parkinson ahead of Sheffield United",
@@ -243,16 +239,11 @@
       "video_id": "7z9L-34DhDg",
       "title": "HIGHLIGHTS | Wrexham AFC vs Preston North End",
       "published": "2026-10-20T09:34:39+00:00"
-    },
-    {
-      "video_id": "FXidCLOg0Mg",
-      "title": "TRIPLE A | Wrexham AFC vs Preston North End",
-      "published": "2026-10-19T20:00:33+00:00"
     }
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (9 relevant items)",
+    "BBC Welsh Football": "OK (8 relevant items)",
     "BBC Sport Championship": "OK (1 relevant items)",
     "BBC Sport": "OK (1 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
