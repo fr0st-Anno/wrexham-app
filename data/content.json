@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-10-30T01:53:52+00:00",
+  "updated_at": "2026-10-30T08:32:11+00:00",
   "news": [
+    {
+      "id": "0a78c7b509a7142b59c2d3",
+      "title": "Sub-plots intensify Blades and Wrexham's rivalry",
+      "summary": "Former team-mates Chris Wilder and Phil Parkinson lock horns again as Sheffield United face Wrexham in the Championship on Friday night.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cky931w9p0x0o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-10-30T04:12:07+00:00",
+      "category": "Club"
+    },
     {
       "id": "3d71c8c9a775f2d86ea2b3",
       "title": "Wrexham fined for fielding ineligible players",
@@ -243,10 +252,10 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (8 relevant items)",
+    "BBC Welsh Football": "OK (9 relevant items)",
     "BBC Sport Championship": "OK (1 relevant items)",
-    "BBC Sport": "OK (0 relevant items)",
+    "BBC Sport": "OK (1 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
-    "Wrexham AFC YouTube": "Unavailable during this update"
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
