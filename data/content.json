@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T15:18:33+00:00",
+  "updated_at": "2026-10-30T20:06:30+00:00",
   "news": [
     {
       "id": "0a78c7b509a7142b59c2d3",
@@ -9,6 +9,15 @@
       "source": "BBC Welsh Football",
       "published": "2026-10-30T04:12:07+00:00",
       "category": "Club"
+    },
+    {
+      "id": "1c97e970c2861f2ea09898",
+      "title": "Sheffield United vs Wrexham LIVE!",
+      "summary": "",
+      "url": "https://www.skysports.com/football/sheffield-united-vs-wrexham/live/560648",
+      "source": "Sky Sports",
+      "published": "2026-10-29T19:00:00+00:00",
+      "category": "Matches"
     },
     {
       "id": "3d71c8c9a775f2d86ea2b3",
@@ -35,15 +44,6 @@
       "url": "https://www.bbc.co.uk/sport/football/articles/cq3djl59gdz2o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Welsh Football",
       "published": "2026-10-28T13:56:28+00:00",
-      "category": "Club"
-    },
-    {
-      "id": "68199c0c58d8bb172ff1d2",
-      "title": "Wrexham beat Barry Town to stay top of Adran Premier",
-      "summary": "There is no change in Adran Premier league positions after the eighth round of the 2026-27 campaign as Wrexham stay top.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/crx2dye5d4l0o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-10-25T17:09:26+00:00",
       "category": "Club"
     },
     {
@@ -252,10 +252,10 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (9 relevant items)",
+    "BBC Welsh Football": "OK (8 relevant items)",
     "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (1 relevant items)",
-    "Sky Sports": "OK (0 relevant items)",
+    "Sky Sports": "OK (1 relevant items)",
     "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
