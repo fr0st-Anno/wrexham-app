@@ -13,7 +13,8 @@ class Element {
 const text=node=>[node.textContent,...node.children.map(text)].join(' ');
 function setup(){
   const elements=new Map();
-  const context=vm.createContext({Date,Intl,Number,String,Array,console,
+  const context=vm.createContext({Date,Intl,Number,String,Array,console,Event,
+    window:{dispatchEvent(){}},safeHttp:value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}},
     el:(...args)=>new Element(...args),
     $:selector=>{if(!elements.has(selector))elements.set(selector,new Element('div'));return elements.get(selector)},
     shortDate:iso=>iso?.slice(0,10)||'', data:{news:[]}
@@ -50,3 +51,25 @@ test('unconfirmed kickoff is not shown as a confirmed time',()=>{
   assert.match(run("fixtureDate({status:'SCHEDULED',kickoff:'2099-01-01T00:00:00Z'})"),/Time to be confirmed/);
   assert.doesNotMatch(run("fixtureDate({status:'POSTPONED',kickoff:'2099-01-01T00:00:00Z'})"),/2099/);
 });
+
+test('results use Wrexham perspective and reject incomplete scores',()=>{
+  const {run}=setup();
+  assert.equal(run("outcome({home:'Other',away:'Wrexham',status:'FINISHED',home_score:0,away_score:2})"),'Win');
+  assert.equal(run("outcome({home:'Wrexham',away:'Other',status:'FINISHED',home_score:0,away_score:2})"),'Loss');
+  assert.equal(run("outcome({home:'Wrexham',away:'Other',status:'FINISHED',home_score:0,away_score:0})"),'Draw');
+  assert.equal(run("outcome({home:'Wrexham',away:'Other',status:'FINISHED',home_score:null,away_score:0})"),null);
+});
+
+test('home combines feeds and preserves unavailable and stale messaging',()=>{
+  const {run,context,elements}=setup();
+  context.window.addEventListener=()=>{};
+  run("data.videos=[]");
+  vm.runInContext(fs.readFileSync('home.js','utf8'),context);
+  assert.match(text(elements.get('#homeMatch')),/unavailable/);
+  assert.match(text(elements.get('#homeNews')),/No stories/);
+  run("sports.updated_at='2020-01-01';sports.standings=[{team:'Wrexham',position:7,points:21,played:12,goal_difference:4}];data.news=[{title:'Example report',source:'Publisher',url:'https://example.com',category:'Transfers'}];renderHome()");
+  assert.match(text(elements.get('#homeFreshness')),/out of date/);
+  assert.match(text(elements.get('#homeStanding')),/21 points/);
+  assert.match(text(elements.get('#homeTransfers')),/Example report/);
+});
+
