@@ -103,6 +103,10 @@ def simplify_match(match):
     full = (match.get('score') or {}).get('fullTime') or {}
     return {
         'id': match.get('id'),
+        'home_id': home.get('id'),
+        'away_id': away.get('id'),
+        'home_crest': home.get('crest'),
+        'away_crest': away.get('crest'),
         'home': home.get('shortName') or home.get('name') or 'Home',
         'away': away.get('shortName') or away.get('name') or 'Away',
         'kickoff': match.get('utcDate'),
@@ -134,6 +138,8 @@ def main():
         standings = [
             {
                 'position': row.get('position'),
+                'team_id': (row.get('team') or {}).get('id'),
+                'crest': (row.get('team') or {}).get('crest'),
                 'team': (row.get('team') or {}).get('shortName') or (row.get('team') or {}).get('name'),
                 'played': row.get('playedGames'),
                 'goal_difference': row.get('goalDifference'),
@@ -195,3 +201,4 @@ def main():
 
 if __name__ == '__main__':
     raise SystemExit(main())
+
