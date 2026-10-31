@@ -71,5 +71,9 @@ test('home combines feeds and preserves unavailable and stale messaging',()=>{
   assert.match(text(elements.get('#homeFreshness')),/out of date/);
   assert.match(text(elements.get('#homeStanding')),/21 points/);
   assert.match(text(elements.get('#homeTransfers')),/Example report/);
+  run("sports.results=[{home:'Old opponent',away:'Wrexham',kickoff:'2020-01-01',home_score:0,away_score:0}];sports.pending=[{home:'Recent opponent',away:'Wrexham',kickoff:'2020-01-02',status:'TIMED'}];renderHome()");
+  assert.match(text(elements.get('#homeResult')),/Recent opponent/);
+  assert.match(text(elements.get('#homeResult')),/awaiting provider/);
+  assert.doesNotMatch(text(elements.get('#homeResult')),/Old opponent/);
 });
 
