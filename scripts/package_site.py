@@ -3,7 +3,7 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = ['index.html', 'navigation.js', 'app.js', 'install.js', 'style.css', 'manifest.webmanifest',
+FILES = ['index.html', 'navigation.js', 'home.js', 'theme.js', 'app.js', 'install.js', 'style.css', 'manifest.webmanifest',
          'assets/favicon.svg', 'assets/apple-touch-icon.png', 'assets/icon-192.png',
          'assets/icon-512.png', 'data/content.json', 'data/sports.json', 'data/sports-status.json']
 
@@ -19,3 +19,4 @@ def package(destination):
 
 if __name__ == '__main__':
     package(ROOT/'_site')
+
