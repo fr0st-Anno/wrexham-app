@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T05:27:50+00:00",
+  "updated_at": "2026-10-31T11:11:37+00:00",
   "news": [
     {
       "id": "d82880cf089a56f9d9b0b4",
@@ -193,6 +193,26 @@
   ],
   "videos": [
     {
+      "video_id": "v8QB3nSdcZM",
+      "title": "HIGHLIGHTS | Sheffield United vs Wrexham AFC",
+      "published": "2026-10-31T00:02:22+00:00"
+    },
+    {
+      "video_id": "yYMnENbXe6A",
+      "title": "INTERVIEW | Max Cleworth after Sheffield United",
+      "published": "2026-10-30T23:14:58+00:00"
+    },
+    {
+      "video_id": "dfwGcfn-DK0",
+      "title": "INTERVIEW | Phil Parkinson after Sheffield United",
+      "published": "2026-10-30T23:14:36+00:00"
+    },
+    {
+      "video_id": "9kcJuaODAiQ",
+      "title": "HOT TAKE | Sheffield United v Wrexham",
+      "published": "2026-10-30T22:21:01+00:00"
+    },
+    {
       "video_id": "2x7BF3rAnyw",
       "title": "PRESS CONFERENCE | Joe Worrall ahead of Sheffield United",
       "published": "2026-10-29T13:43:27+00:00"
@@ -246,26 +266,6 @@
       "video_id": "wFBwgC4OnXY",
       "title": "HOT TAKE | Blackburn Rovers v Wrexham",
       "published": "2026-10-24T16:10:09+00:00"
-    },
-    {
-      "video_id": "M9Denegqn6w",
-      "title": "PRESS CONFERENCE | Callum Doyle ahead of Blackburn Rovers",
-      "published": "2026-10-23T11:00:23+00:00"
-    },
-    {
-      "video_id": "ek13bNGpiJE",
-      "title": "PRESS CONFERENCE | Phil Parkinson ahead of Blackburn Rovers",
-      "published": "2026-10-22T17:42:34+00:00"
-    },
-    {
-      "video_id": "iPIGepxwMFQ",
-      "title": "POV: Walking to the top of the Kop 📲🔴⚪️ #WxmAFC",
-      "published": "2026-10-20T14:26:50+00:00"
-    },
-    {
-      "video_id": "7z9L-34DhDg",
-      "title": "HIGHLIGHTS | Wrexham AFC vs Preston North End",
-      "published": "2026-10-20T09:34:39+00:00"
     }
   ],
   "sources": {
@@ -274,6 +274,6 @@
     "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (2 relevant items)",
-    "Wrexham AFC YouTube": "Unavailable during this update"
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
