@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T16:17:56+00:00",
+  "updated_at": "2026-10-31T20:16:17+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -12,12 +12,48 @@
       "team_id": 343,
       "crest": "https://crests.football-data.org/343.png",
       "team": "Middlesbrough",
-      "played": 12,
-      "goal_difference": 10,
-      "points": 25
+      "played": 13,
+      "goal_difference": 13,
+      "points": 28
     },
     {
       "position": 2,
+      "team_id": 72,
+      "crest": "https://crests.football-data.org/72.png",
+      "team": "Swansea",
+      "played": 13,
+      "goal_difference": 7,
+      "points": 26
+    },
+    {
+      "position": 3,
+      "team_id": 76,
+      "crest": "https://crests.football-data.org/76.png",
+      "team": "Wolverhampton",
+      "played": 13,
+      "goal_difference": 7,
+      "points": 24
+    },
+    {
+      "position": 4,
+      "team_id": 74,
+      "crest": "https://crests.football-data.org/74.png",
+      "team": "West Brom",
+      "played": 13,
+      "goal_difference": 5,
+      "points": 24
+    },
+    {
+      "position": 5,
+      "team_id": 340,
+      "crest": "https://crests.football-data.org/340.png",
+      "team": "Southampton",
+      "played": 13,
+      "goal_difference": 15,
+      "points": 23
+    },
+    {
+      "position": 6,
       "team_id": 332,
       "crest": "https://crests.football-data.org/332.png",
       "team": "Birmingham",
@@ -26,7 +62,7 @@
       "points": 23
     },
     {
-      "position": 3,
+      "position": 7,
       "team_id": 70,
       "crest": "https://crests.football-data.org/70.png",
       "team": "Stoke",
@@ -35,57 +71,21 @@
       "points": 23
     },
     {
-      "position": 4,
-      "team_id": 72,
-      "crest": "https://crests.football-data.org/72.png",
-      "team": "Swansea",
-      "played": 12,
-      "goal_difference": 3,
-      "points": 23
-    },
-    {
-      "position": 5,
+      "position": 8,
       "team_id": 563,
       "crest": "https://crests.football-data.org/563.png",
       "team": "West Ham",
-      "played": 12,
-      "goal_difference": 17,
+      "played": 13,
+      "goal_difference": 15,
       "points": 22
-    },
-    {
-      "position": 6,
-      "team_id": 76,
-      "crest": "https://crests.football-data.org/76.png",
-      "team": "Wolverhampton",
-      "played": 12,
-      "goal_difference": 4,
-      "points": 21
-    },
-    {
-      "position": 7,
-      "team_id": 74,
-      "crest": "https://crests.football-data.org/74.png",
-      "team": "West Brom",
-      "played": 12,
-      "goal_difference": 3,
-      "points": 21
-    },
-    {
-      "position": 8,
-      "team_id": 340,
-      "crest": "https://crests.football-data.org/340.png",
-      "team": "Southampton",
-      "played": 12,
-      "goal_difference": 12,
-      "points": 20
     },
     {
       "position": 9,
       "team_id": 69,
       "crest": "https://crests.football-data.org/69.png",
       "team": "QPR",
-      "played": 12,
-      "goal_difference": 8,
+      "played": 13,
+      "goal_difference": 5,
       "points": 20
     },
     {
@@ -99,47 +99,47 @@
     },
     {
       "position": 11,
-      "team_id": 59,
-      "crest": "https://crests.football-data.org/59.png",
-      "team": "Blackburn",
-      "played": 12,
-      "goal_difference": 3,
-      "points": 18
-    },
-    {
-      "position": 12,
       "team_id": 325,
       "crest": "https://crests.football-data.org/325.png",
       "team": "Portsmouth",
-      "played": 12,
+      "played": 13,
       "goal_difference": 1,
+      "points": 19
+    },
+    {
+      "position": 12,
+      "team_id": 384,
+      "crest": "https://crests.football-data.org/384.png",
+      "team": "Millwall",
+      "played": 13,
+      "goal_difference": 2,
       "points": 18
     },
     {
       "position": 13,
+      "team_id": 59,
+      "crest": "https://crests.football-data.org/59.png",
+      "team": "Blackburn",
+      "played": 13,
+      "goal_difference": -1,
+      "points": 18
+    },
+    {
+      "position": 14,
+      "team_id": 387,
+      "crest": "https://crests.football-data.org/387.png",
+      "team": "Bristol City",
+      "played": 13,
+      "goal_difference": -2,
+      "points": 18
+    },
+    {
+      "position": 15,
       "team_id": 68,
       "crest": "https://crests.football-data.org/68.png",
       "team": "Norwich",
       "played": 13,
       "goal_difference": -1,
-      "points": 15
-    },
-    {
-      "position": 14,
-      "team_id": 384,
-      "crest": "https://crests.football-data.org/384.png",
-      "team": "Millwall",
-      "played": 12,
-      "goal_difference": -1,
-      "points": 15
-    },
-    {
-      "position": 15,
-      "team_id": 387,
-      "crest": "https://crests.football-data.org/387.png",
-      "team": "Bristol City",
-      "played": 12,
-      "goal_difference": -3,
       "points": 15
     },
     {
@@ -156,8 +156,8 @@
       "team_id": 715,
       "crest": "https://crests.football-data.org/715.png",
       "team": "Cardiff",
-      "played": 12,
-      "goal_difference": 2,
+      "played": 13,
+      "goal_difference": -1,
       "points": 14
     },
     {
@@ -174,8 +174,8 @@
       "team_id": 60,
       "crest": "https://crests.football-data.org/60.png",
       "team": "Bolton",
-      "played": 12,
-      "goal_difference": -7,
+      "played": 13,
+      "goal_difference": -8,
       "points": 14
     },
     {
@@ -183,8 +183,8 @@
       "team_id": 348,
       "crest": "https://crests.football-data.org/348.png",
       "team": "Charlton",
-      "played": 12,
-      "goal_difference": -7,
+      "played": 13,
+      "goal_difference": -10,
       "points": 14
     },
     {
@@ -201,17 +201,17 @@
       "team_id": 328,
       "crest": "https://crests.football-data.org/328.png",
       "team": "Burnley",
-      "played": 12,
+      "played": 13,
       "goal_difference": -8,
-      "points": 8
+      "points": 9
     },
     {
       "position": 23,
       "team_id": 342,
       "crest": "https://crests.football-data.org/342.png",
       "team": "Derby County",
-      "played": 12,
-      "goal_difference": -11,
+      "played": 13,
+      "goal_difference": -14,
       "points": 7
     },
     {
