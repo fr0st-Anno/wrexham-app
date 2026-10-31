@@ -145,11 +145,41 @@ const futureFixtures=()=>sports.fixtures.filter(m=>['TIMED','SCHEDULED'].include
 const matchState=m=>({TIMED:'Scheduled',SCHEDULED:'Time to be confirmed',POSTPONED:'Postponed · new date awaited',CANCELLED:'Cancelled',SUSPENDED:'Suspended',IN_PLAY:'In progress · delayed update',PAUSED:'Half-time · delayed update',FINISHED:'Full time'}[m.status]||'Awaiting provider update');
 const scoreText=m=>m.home_score==null||m.away_score==null?'—':`${m.home_score} : ${m.away_score}`;
 function fixtureDate(m){return m.status==='TIMED'||m.status==='FINISHED'?formatKickoff(m.kickoff):['POSTPONED','CANCELLED','SUSPENDED'].includes(m.status)?'Date to be confirmed':`${shortDate(m.kickoff)} · ${matchState(m)}`}
+
+function teamLabel(name, crest){
+  const label=el('span','team-label');
+  const url=safeHttp(crest);
+  if(url){const img=el('img','team-crest');img.src=url;img.alt='';img.loading='lazy';img.addEventListener('error',()=>img.remove());label.append(img)}
+  label.append(el('span','',name||'Team'));return label;
+}
+function teamStanding(m,side){
+  return sports.standings.find(r=>m[side+'_id']&&r.team_id===m[side+'_id']) ||
+    sports.standings.find(r=>r.team===m[side]);
+}
+function matchTeams(m){
+  const teams=el('div','match-teams');
+  teams.append(teamLabel(m.home,m.home_crest||teamStanding(m,'home')?.crest),el('span','versus','–'),teamLabel(m.away,m.away_crest||teamStanding(m,'away')?.crest));
+  return teams;
+}
+function outcome(m){
+  if(m.status!=='FINISHED'||!Number.isFinite(m.home_score)||!Number.isFinite(m.away_score))return null;
+  const home=/wrexham/i.test(m.home||''),away=/wrexham/i.test(m.away||'');
+  if(home===away)return null;
+  const delta=(m.home_score-m.away_score)*(home?1:-1);
+  return delta===0?'Draw':delta>0?'Win':'Loss';
+}
+function resultBadge(m){
+  const result=outcome(m),badge=el('div','result-score'+(result?' outcome outcome-'+result.toLowerCase():''));
+  badge.append(el('strong','',scoreText(m)));
+  if(result)badge.append(el('small','',result));
+  return badge;
+}
+
 function fixturesPanel(){
   const target=$('#upcomingFixtures');target.replaceChildren();
   const upcoming=futureFixtures();
   if(!upcoming.length)safeText(target,'p','sport-empty',sports.updated_at?'No upcoming Championship fixtures supplied.':'Fixtures will appear after the football feed is connected.');
-  for(const m of upcoming){const row=el('div','result-row');const info=el('div');safeText(info,'strong','',`${m.home} – ${m.away}`);safeText(info,'span','',fixtureDate(m));row.append(info);safeText(row,'span','fixture-status',matchState(m));target.append(row)}
+  for(const m of upcoming){const row=el('div','result-row');const info=el('div');info.append(matchTeams(m));safeText(info,'span','',fixtureDate(m));row.append(info);const positions=el('span','fixture-positions');const h=teamStanding(m,'home'),a=teamStanding(m,'away');positions.textContent=h&&a?`Current positions: ${h.position} vs ${a.position}`:'';row.append(positions);safeText(row,'span','fixture-status',matchState(m));target.append(row)}
   const pending=$('#pendingMatches');pending.replaceChildren();
   const waiting=[...(sports.pending||[]),...sports.fixtures.filter(m=>!upcoming.includes(m))];
   if(waiting.length)safeText(pending,'h3','','Match updates');
@@ -158,13 +188,13 @@ function fixturesPanel(){
 const formatKickoff=(iso)=>{if(!iso)return 'Kick-off to be confirmed';const d=new Date(iso);if(isNaN(+d))return 'Kick-off to be confirmed';return new Intl.DateTimeFormat('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZoneName:'short'}).format(d)};
 function safeText(parent,tag,cls,value){const p=el(tag,cls,String(value??''));parent.append(p);return p}
 function resultsPanel(){const target=$('#recentResults');target.replaceChildren();if(!sports.results?.length){safeText(target,'p','sport-empty',sports.updated_at?'No completed Championship matches supplied for this season.':'Latest results will appear after connecting match data.');return}
-  for(const m of sports.results.slice(0,8)){const card=el('div','result-row');const teams=el('div');safeText(teams,'strong','',`${m.home} – ${m.away}`);safeText(teams,'span','',`${formatKickoff(m.kickoff)} · Full time`);safeText(card,'div','result-score',scoreText(m));card.prepend(teams);target.append(card)}
+  for(const m of sports.results.slice(0,8)){const card=el('div','result-row');const teams=el('div');teams.append(matchTeams(m));safeText(teams,'span','',`${formatKickoff(m.kickoff)} · Full time`);card.append(resultBadge(m));card.prepend(teams);target.append(card)}
 }
 function nextMatchPanel(){const target=$('#nextMatch');target.replaceChildren();const m=futureFixtures()[0];if(!m){safeText(target,'p','skeleton-match',sports.updated_at?'No upcoming Championship fixture supplied for this season.':'Next fixture will appear once the match data service is connected.');return}
-  safeText(target,'div','fixture-matchdate',fixtureDate(m));const teams=el('div','teams');safeText(teams,'strong','',m.home);safeText(teams,'span','versus','VS');safeText(teams,'strong','',m.away);target.append(teams);safeText(target,'div','venue-line',m.competition||'EFL Championship')
+  safeText(target,'div','fixture-matchdate',fixtureDate(m));const teams=el('div','teams');teams.append(teamLabel(m.home,m.home_crest||teamStanding(m,'home')?.crest));safeText(teams,'span','versus','VS');teams.append(teamLabel(m.away,m.away_crest||teamStanding(m,'away')?.crest));target.append(teams);safeText(target,'div','venue-line',m.competition||'EFL Championship')
 }
 function tablePanel(){const target=$('#standingsBody');target.replaceChildren();const rows=sports.standings||[];$('#standings-label').classList.toggle('connected',rows.length>0);$('#standings-label').textContent=rows.length?'UPDATED TABLE':'AWAITING DATA';if(!rows.length){const row=el('tr');const cell=safeText(row,'td','empty-cell','The current league table will load once the free football API is configured.');cell.colSpan=5;target.append(row);return}
-  for(const r of rows){const tr=el('tr',/wrexham/i.test(r.team)?'wrexham-row':'');for(const k of ['position','team','played','goal_difference','points'])safeText(tr,'td','',r[k]??'—');target.append(tr)}
+  for(const r of rows){const tr=el('tr',/wrexham/i.test(r.team)?'wrexham-row':'');for(const k of ['position','team','played','goal_difference','points']){const cell=safeText(tr,'td','',k==='team'?'':r[k]??'—');if(k==='team')cell.append(teamLabel(r.team,r.crest))}target.append(tr)}
 }
 function squadPanel(){const target=$('#squadGrid');target.replaceChildren();const search=$('#playerSearch').value.trim().toLowerCase();const list=(sports.squad||[]).filter(p=>String(p.name||'').toLowerCase().includes(search));if(!list.length){safeText(target,'div','sport-empty-card',search?'No matching player found.':'The player roster will load if the football data provider makes squad information available.');return}
   for(const p of list){const tile=el('article','player-tile');const initials=(p.name||'W').split(/\s+/).slice(0,2).map(n=>n[0]).join('').toUpperCase();safeText(tile,'div','player-portrait',initials);safeText(tile,'div','player-position',p.position||'Player');safeText(tile,'h3','',p.name||'Player');safeText(tile,'p','',p.nationality||'Nationality unavailable');if(p.dob){const age=Math.floor((Date.now()-new Date(p.dob).getTime())/(365.25*864e5));if(age>=15&&age<55)safeText(tile,'p','',`Age: ${age}`)}
@@ -180,6 +210,7 @@ function renderSports(){nextMatchPanel();fixturesPanel();resultsPanel();tablePan
   $('#sports-updated').textContent=connected?`${stale?'Data may be out of date · ':''}Last success ${formatKickoff(sports.updated_at)}${failed?' · Latest refresh unavailable':''} · Delayed scores`:sportsHealth.status==='not_configured'?'Sports feed awaits setup':'Football data currently unavailable';
   $('.pulse-indicator').classList.toggle('connected',connected&&!stale&&!failed);
   if(sports.standings.length){$('#standings-label').textContent=stale||failed?'LAST AVAILABLE TABLE':'UPDATED TABLE';$('#standings-label').classList.toggle('connected',!stale&&!failed)}
+  window.dispatchEvent(new Event('wrexham-sports-updated'));
   $('#table-title').textContent=sports.season?`League standings · ${sports.season.start.slice(0,4)}/${sports.season.end.slice(2,4)}`:'League standings';
 }
 async function loadSports(){
@@ -197,3 +228,4 @@ $('#playerSearch').addEventListener('input',squadPanel);
 renderSports();transferPanel();loadSports();
 setInterval(renderSports,60000);
 setInterval(loadSports,5*60000);
+
