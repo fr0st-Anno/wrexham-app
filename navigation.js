@@ -1,12 +1,12 @@
 'use strict';
 // Query routes work on GitHub Pages and survive refreshes without server rewrites.
 (() => {
-  const pages = ['news', 'standings', 'matches', 'squad', 'transfers', 'videos'];
+  const pages = ['home', 'news', 'standings', 'matches', 'squad', 'transfers', 'videos'];
   const legacy = {stories:'news', matchcentre:'matches', standings:'standings', squad:'squad', transfers:'transfers', videos:'videos'};
   function currentPage() {
     const url = new URL(location.href);
     const page = legacy[url.hash.slice(1)] || url.searchParams.get('page');
-    return pages.includes(page) ? page : 'news';
+    return pages.includes(page) ? page : 'home';
   }
   function renderPage(focus = false) {
     const page = currentPage();
@@ -30,7 +30,7 @@
     if (url.href !== location.href) history.pushState(null, '', url);
     renderPage(true);
   };
-  document.querySelectorAll('.top-navigation a').forEach(link => link.addEventListener('click', event => {
+  document.querySelectorAll('.top-navigation a, .identity, [data-home-link]').forEach(link => link.addEventListener('click', event => {
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     window.navigatePage(new URL(link.href).searchParams.get('page'));
@@ -39,3 +39,4 @@
   window.addEventListener('hashchange', () => renderPage(true));
   renderPage();
 })();
+
