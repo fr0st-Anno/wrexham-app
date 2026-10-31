@@ -16,7 +16,9 @@ function renderHome(){
   const table=sports.standings.find(r=>/wrexham/i.test(r.team||''));
   if(table){safeText(standing,'strong','home-position',String(table.position));safeText(standing,'p','',`${table.points} points · ${table.played} played · GD ${table.goal_difference}`)}
   else safeText(standing,'p','','League position unavailable.');
-  if(sports.results[0]){result.append(matchTeams(sports.results[0]),resultBadge(sports.results[0]));safeText(result,'small','',fixtureDate(sports.results[0]))}
+  const unresolved=[...(sports.pending||[]),...sports.fixtures].filter(m=>['TIMED','SCHEDULED','IN_PLAY','PAUSED','SUSPENDED'].includes(m.status)&&Date.parse(m.kickoff)<Date.now()&&(!sports.results[0]||Date.parse(m.kickoff)>Date.parse(sports.results[0].kickoff))).sort((a,b)=>Date.parse(b.kickoff)-Date.parse(a.kickoff))[0];
+  if(unresolved){result.append(matchTeams(unresolved));safeText(result,'p','pending-result','Result awaiting provider update');safeText(result,'small','',formatKickoff(unresolved.kickoff))}
+  else if(sports.results[0]){result.append(matchTeams(sports.results[0]),resultBadge(sports.results[0]));safeText(result,'small','',fixtureDate(sports.results[0]))}
   else safeText(result,'p','','No result supplied.');
   const warning=sportsStale()||!['connected','unknown'].includes(sportsHealth.status);
   $('#homeFreshness').textContent=sports.updated_at?`${warning?'Data may be out of date · ':''}Football updated ${formatKickoff(sports.updated_at)} · Delayed scores`:'Football data currently unavailable';
