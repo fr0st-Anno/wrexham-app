@@ -127,3 +127,6 @@ body{background:var(--paper);color:var(--ink)}
 @media(max-width:1000px){.home-overview{grid-template-columns:1fr 1fr}.home-overview>.fixture-next{grid-column:1/-1}.home-columns{grid-template-columns:1fr}.home-transfer-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.tabs{flex-wrap:wrap;overflow:visible}.tabs .tab{flex:0 0 auto;max-width:100%;white-space:normal;overflow-wrap:anywhere}.home-overview{grid-template-columns:1fr}.home-card{padding:18px}.theme-control{margin-left:auto}.icon-button{margin-left:0}.top-navigation{flex-wrap:wrap;overflow:visible;gap:2px}.top-navigation a{padding:8px}.fixture-grid{grid-template-columns:1fr}.upcoming-panel .result-row{grid-template-columns:minmax(0,1fr) auto}.fixture-positions{grid-column:1;margin:0}.upcoming-panel .fixture-status{grid-column:2;grid-row:1}.result-row{gap:10px}.match-teams{gap:6px;font-size:12px}.team-crest{width:22px;height:25px}.home-video span{font-size:13px}.home-heading{align-items:baseline}.home-heading a{flex-shrink:0}}
 
+
+/* Compact appearance switch at the end of the header controls. */
+.theme-toggle{order:2;justify-content:center;min-width:44px;min-height:44px;font-size:23px;line-height:1;padding:8px}
