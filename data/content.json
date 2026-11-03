@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-11-03T17:46:30+00:00",
+  "updated_at": "2026-11-03T23:14:50+00:00",
   "news": [
+    {
+      "id": "5f89358efbeae7617ec3bc",
+      "title": "Parkinson eyes Wrexham response after honest talks",
+      "summary": "Wrexham manager Phil Parkinson has held \"honest\" discussions with his players they look to respond to defeat at Sheffield United.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cwkg5delydy7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-03T18:28:41+00:00",
+      "category": "Players"
+    },
     {
       "id": "c578cfbe1f2bac6cad04b6",
       "title": "Hellberg hints at changes for Boro's week on road",
@@ -173,15 +182,6 @@
       "category": "Injuries"
     },
     {
-      "id": "ad8ecc95d02022f11bc8a8",
-      "title": "Wrexham's Kop: The project matching the club's rise",
-      "summary": "Wrexham's new Kop stand a signal of their ambition to keep climbing from the Championship to the Premier League.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/c5dj4j2kvm98o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-10-07T05:25:09+00:00",
-      "category": "Matches"
-    },
-    {
       "id": "3275d831e1da5c55da5d50",
       "title": "Wrexham making rapid progress with new Kop Stand",
       "summary": "Wrexham chief strategy officer Aidan Miller says the new Kop Stand is on plan to be fully operational by the start of the 2027-28 season.",
@@ -271,9 +271,9 @@
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
     "BBC Welsh Football": "OK (9 relevant items)",
-    "BBC Sport Championship": "OK (3 relevant items)",
+    "BBC Sport Championship": "OK (4 relevant items)",
     "BBC Sport": "OK (1 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
-    "Wrexham AFC YouTube": "OK (15 relevant items)"
+    "Wrexham AFC YouTube": "Unavailable during this update"
   }
 }
