@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-03T10:00:06+00:00",
+  "updated_at": "2026-11-03T17:46:30+00:00",
   "news": [
+    {
+      "id": "c578cfbe1f2bac6cad04b6",
+      "title": "Hellberg hints at changes for Boro's week on road",
+      "summary": "Middlesbrough face two away games in less than 72 hours with trips to Wrexham and Watford for the Championship leaders.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cm79pgy9xvr2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport Championship",
+      "published": "2026-11-03T16:21:06+00:00",
+      "category": "Club"
+    },
+    {
+      "id": "60aff965e47d8e9f6fdca8",
+      "title": "Wrexham suffer 'significant' Smith injury blow",
+      "summary": "Wrexham forward Sam Smith faces a \"significant\" spell out of action due to a knee injury, manager Phil Parkinson confirms.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cqrmyr0m3ydxo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-03T15:20:23+00:00",
+      "category": "Injuries"
+    },
     {
       "id": "561ad11aac65e515adf193",
       "title": "Feast of Football",
@@ -252,9 +270,9 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (8 relevant items)",
-    "BBC Sport Championship": "OK (1 relevant items)",
-    "BBC Sport": "OK (0 relevant items)",
+    "BBC Welsh Football": "OK (9 relevant items)",
+    "BBC Sport Championship": "OK (3 relevant items)",
+    "BBC Sport": "OK (1 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
     "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
