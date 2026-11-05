@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T07:20:52+00:00",
+  "updated_at": "2026-11-05T15:47:24+00:00",
   "news": [
     {
       "id": "49910358e6fb745c660eb3",
@@ -11,22 +11,22 @@
       "category": "Matches"
     },
     {
-      "id": "bbe1c239af833dbeac3492",
-      "title": "Boro struggle without Lankshear as Wrexham beat Championship leaders",
-      "summary": "Championship leaders Middlesbrough suffered only their second league defeat of the season as Wrexham eased the pressure on Phil Parkinson with a much-needed 2-0 win.",
-      "url": "https://www.skysports.com/football/wrexham-vs-middlesbrough/report/560665",
-      "source": "Sky Sports",
-      "published": "2026-11-04T21:15:00+00:00",
+      "id": "73d490e68e0d43c5daf474",
+      "title": "Parkinson: Middlesbrough moaning was 'music to my ears'",
+      "summary": "Boss Phil Parkinson revels in Wrexham's 2-0 win against table toppers Middlesbrough.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0plc3dh?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport Championship",
+      "published": "2026-11-04T22:35:00+00:00",
       "category": "Matches"
     },
     {
-      "id": "47916b96ce0cbbdbbc615f",
-      "title": "EFL latest: Lankshear misses Wrexham game due to injury",
-      "summary": "",
-      "url": "https://www.skysports.com/football/live-blog/11095/13163353/championship-news-transfer-latest-and-gossip-plus-efl-updates-from-league-one-and-league-two",
-      "source": "Sky Sports",
-      "published": "2026-11-03T20:07:00+00:00",
-      "category": "Injuries"
+      "id": "98172aec54927618a39090",
+      "title": "Hellberg: Boro 'didn't create much' against Wrexham",
+      "summary": "Kim Hellberg spoke to Mark Drury following Middlesbrough's 2-0 defeat at Wrexham.",
+      "url": "https://www.bbc.co.uk/sounds/play/p0plc0sg?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport Championship",
+      "published": "2026-11-04T22:03:00+00:00",
+      "category": "Club"
     },
     {
       "id": "2098d86c43f10daad22349",
@@ -36,15 +36,6 @@
       "source": "BBC Sport Championship",
       "published": "2026-11-03T18:28:41+00:00",
       "category": "Players"
-    },
-    {
-      "id": "c578cfbe1f2bac6cad04b6",
-      "title": "Hellberg hints at changes for Boro's week on road",
-      "summary": "Middlesbrough face two away games in less than 72 hours with trips to Wrexham and Watford for the Championship leaders.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cm79pgy9xvr2o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport Championship",
-      "published": "2026-11-03T16:21:06+00:00",
-      "category": "Club"
     },
     {
       "id": "60aff965e47d8e9f6fdca8",
@@ -289,9 +280,9 @@
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
     "BBC Welsh Football": "OK (9 relevant items)",
-    "BBC Sport Championship": "OK (3 relevant items)",
+    "BBC Sport Championship": "OK (4 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
-    "Sky Sports": "OK (2 relevant items)",
-    "Wrexham AFC YouTube": "Unavailable during this update"
+    "Sky Sports": "OK (0 relevant items)",
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
