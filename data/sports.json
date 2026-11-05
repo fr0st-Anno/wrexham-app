@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04T18:51:32+00:00",
+  "updated_at": "2026-11-05T00:20:12+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -12,12 +12,21 @@
       "team_id": 343,
       "crest": "https://crests.football-data.org/343.png",
       "team": "Middlesbrough",
-      "played": 13,
-      "goal_difference": 13,
+      "played": 14,
+      "goal_difference": 11,
       "points": 28
     },
     {
       "position": 2,
+      "team_id": 76,
+      "crest": "https://crests.football-data.org/76.png",
+      "team": "Wolverhampton",
+      "played": 14,
+      "goal_difference": 8,
+      "points": 27
+    },
+    {
+      "position": 3,
       "team_id": 332,
       "crest": "https://crests.football-data.org/332.png",
       "team": "Birmingham",
@@ -26,7 +35,7 @@
       "points": 26
     },
     {
-      "position": 3,
+      "position": 4,
       "team_id": 70,
       "crest": "https://crests.football-data.org/70.png",
       "team": "Stoke",
@@ -35,7 +44,7 @@
       "points": 26
     },
     {
-      "position": 4,
+      "position": 5,
       "team_id": 72,
       "crest": "https://crests.football-data.org/72.png",
       "team": "Swansea",
@@ -44,7 +53,7 @@
       "points": 26
     },
     {
-      "position": 5,
+      "position": 6,
       "team_id": 74,
       "crest": "https://crests.football-data.org/74.png",
       "team": "West Brom",
@@ -53,7 +62,7 @@
       "points": 25
     },
     {
-      "position": 6,
+      "position": 7,
       "team_id": 340,
       "crest": "https://crests.football-data.org/340.png",
       "team": "Southampton",
@@ -62,22 +71,13 @@
       "points": 24
     },
     {
-      "position": 7,
-      "team_id": 76,
-      "crest": "https://crests.football-data.org/76.png",
-      "team": "Wolverhampton",
-      "played": 13,
-      "goal_difference": 7,
-      "points": 24
-    },
-    {
       "position": 8,
       "team_id": 563,
       "crest": "https://crests.football-data.org/563.png",
       "team": "West Ham",
-      "played": 13,
+      "played": 14,
       "goal_difference": 15,
-      "points": 22
+      "points": 23
     },
     {
       "position": 9,
@@ -138,12 +138,21 @@
       "team_id": 387,
       "crest": "https://crests.football-data.org/387.png",
       "team": "Bristol City",
-      "played": 13,
-      "goal_difference": -2,
+      "played": 14,
+      "goal_difference": -3,
       "points": 18
     },
     {
       "position": 16,
+      "team_id": 404,
+      "crest": "https://crests.football-data.org/404.png",
+      "team": "Wrexham",
+      "played": 14,
+      "goal_difference": -2,
+      "points": 17
+    },
+    {
+      "position": 17,
       "team_id": 60,
       "crest": "https://crests.football-data.org/60.png",
       "team": "Bolton",
@@ -152,31 +161,22 @@
       "points": 17
     },
     {
-      "position": 17,
+      "position": 18,
+      "team_id": 715,
+      "crest": "https://crests.football-data.org/715.png",
+      "team": "Cardiff",
+      "played": 14,
+      "goal_difference": -1,
+      "points": 15
+    },
+    {
+      "position": 19,
       "team_id": 1126,
       "crest": "https://crests.football-data.org/1126.png",
       "team": "Lincoln City",
       "played": 14,
       "goal_difference": -10,
       "points": 15
-    },
-    {
-      "position": 18,
-      "team_id": 715,
-      "crest": "https://crests.football-data.org/715.png",
-      "team": "Cardiff",
-      "played": 13,
-      "goal_difference": -1,
-      "points": 14
-    },
-    {
-      "position": 19,
-      "team_id": 404,
-      "crest": "https://crests.football-data.org/404.png",
-      "team": "Wrexham",
-      "played": 13,
-      "goal_difference": -4,
-      "points": 14
     },
     {
       "position": 20,
@@ -225,20 +225,6 @@
     }
   ],
   "fixtures": [
-    {
-      "id": 561927,
-      "home_id": 404,
-      "away_id": 343,
-      "home_crest": "https://crests.football-data.org/404.png",
-      "away_crest": "https://crests.football-data.org/343.png",
-      "home": "Wrexham",
-      "away": "Middlesbrough",
-      "kickoff": "2026-11-04T19:45:00Z",
-      "competition": "Championship",
-      "status": "TIMED",
-      "home_score": null,
-      "away_score": null
-    },
     {
       "id": 561933,
       "home_id": 404,
@@ -336,9 +322,37 @@
       "status": "TIMED",
       "home_score": null,
       "away_score": null
+    },
+    {
+      "id": 562019,
+      "home_id": 404,
+      "away_id": 69,
+      "home_crest": "https://crests.football-data.org/404.png",
+      "away_crest": "https://crests.football-data.org/69.png",
+      "home": "Wrexham",
+      "away": "QPR",
+      "kickoff": "2026-12-19T15:00:00Z",
+      "competition": "Championship",
+      "status": "TIMED",
+      "home_score": null,
+      "away_score": null
     }
   ],
   "results": [
+    {
+      "id": 561927,
+      "home_id": 404,
+      "away_id": 343,
+      "home_crest": "https://crests.football-data.org/404.png",
+      "away_crest": "https://crests.football-data.org/343.png",
+      "home": "Wrexham",
+      "away": "Middlesbrough",
+      "kickoff": "2026-11-04T19:45:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 2,
+      "away_score": 0
+    },
     {
       "id": 561916,
       "home_id": 356,
@@ -436,20 +450,6 @@
       "status": "FINISHED",
       "home_score": 6,
       "away_score": 0
-    },
-    {
-      "id": 561830,
-      "home_id": 404,
-      "away_id": 328,
-      "home_crest": "https://crests.football-data.org/404.png",
-      "away_crest": "https://crests.football-data.org/328.png",
-      "home": "Wrexham",
-      "away": "Burnley",
-      "kickoff": "2026-09-08T18:45:00Z",
-      "competition": "Championship",
-      "status": "FINISHED",
-      "home_score": 1,
-      "away_score": 1
     }
   ],
   "pending": [],
