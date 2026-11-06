@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T17:26:05+00:00",
+  "updated_at": "2026-11-06T22:21:35+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -156,8 +156,8 @@
       "team_id": 60,
       "crest": "https://crests.football-data.org/60.png",
       "team": "Bolton",
-      "played": 14,
-      "goal_difference": -7,
+      "played": 15,
+      "goal_difference": -9,
       "points": 17
     },
     {
@@ -210,9 +210,9 @@
       "team_id": 342,
       "crest": "https://crests.football-data.org/342.png",
       "team": "Derby County",
-      "played": 14,
-      "goal_difference": -18,
-      "points": 7
+      "played": 15,
+      "goal_difference": -16,
+      "points": 10
     },
     {
       "position": 24,
