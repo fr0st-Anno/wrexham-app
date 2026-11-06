@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T02:19:23+00:00",
+  "updated_at": "2026-11-06T09:49:36+00:00",
   "news": [
     {
       "id": "49910358e6fb745c660eb3",
@@ -29,15 +29,6 @@
       "category": "Club"
     },
     {
-      "id": "2098d86c43f10daad22349",
-      "title": "Parkinson eyes Wrexham response after honest talks",
-      "summary": "Wrexham manager Phil Parkinson has held \"honest\" discussions with his players they look to respond to defeat at Sheffield United.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cwkg5delydy7o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Sport Championship",
-      "published": "2026-11-03T18:28:41+00:00",
-      "category": "Players"
-    },
-    {
       "id": "60aff965e47d8e9f6fdca8",
       "title": "Wrexham suffer 'significant' Smith injury blow",
       "summary": "Wrexham forward Sam Smith faces a \"significant\" spell out of action due to a knee injury, manager Phil Parkinson confirms.",
@@ -63,15 +54,6 @@
       "source": "BBC Welsh Football",
       "published": "2026-11-01T17:12:26+00:00",
       "category": "Matches"
-    },
-    {
-      "id": "d82880cf089a56f9d9b0b4",
-      "title": "Wrexham need honest self-assessment - Parkinson",
-      "summary": "Phil Parkinson says he will not shy away from any criticism that comes his way following Wrexham's 1-0 Championship loss to Sheffield United at Bramall Lane.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/c623d2zv711mo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-10-30T23:00:51+00:00",
-      "category": "Club"
     },
     {
       "id": "3d71c8c9a775f2d86ea2b3",
@@ -279,10 +261,10 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (9 relevant items)",
-    "BBC Sport Championship": "OK (3 relevant items)",
+    "BBC Welsh Football": "OK (8 relevant items)",
+    "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
-    "Wrexham AFC YouTube": "Unavailable during this update"
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
