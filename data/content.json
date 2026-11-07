@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-07T09:12:18+00:00",
+  "updated_at": "2026-11-07T15:53:57+00:00",
   "news": [
+    {
+      "id": "c34857617525deae7f8d72",
+      "title": "Wrexham owners' presence uplifting - Parkinson",
+      "summary": "Phil Parkinson says Wrexham always feel uplifted when co-owners Ryan Reynolds and Rob Mac attend a fixture after the duo watched their side's 1-1 draw with Wolverhampton Wanderers at the Racecourse Ground.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cmwyv05qwvj1o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-07T15:26:27+00:00",
+      "category": "Matches"
+    },
+    {
+      "id": "7b7a1de19a4642bc8d8af5",
+      "title": "Wrexham hit back to hold Wolves",
+      "summary": "Lewis O'Brien's first goal of the season earned Wrexham a 1-1 draw and prevented Wolves going top of the SkyBet Championship.",
+      "url": "https://www.skysports.com/football/wrexham-vs-wolverhampton-wanderers/report/560677",
+      "source": "Sky Sports",
+      "published": "2026-11-07T14:10:00+00:00",
+      "category": "Matches"
+    },
     {
       "id": "fdb012ca55c9bed58d3c17",
       "title": "Wrexham chief executive Williamson leaves after two years",
@@ -72,15 +90,6 @@
       "source": "BBC Welsh Football",
       "published": "2026-11-02T16:54:00+00:00",
       "category": "Players"
-    },
-    {
-      "id": "24eb03a3562c9b68516eb1",
-      "title": "Cardiff beat Swansea as Wrexham hit four in Adran Premier",
-      "summary": "Cardiff earn derby victory over Swansea, leaders Wrexham win again and The New Saints are held in the Adran Premier.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cq77pykmg3emo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-11-01T17:12:26+00:00",
-      "category": "Matches"
     },
     {
       "id": "345cffb6dbd800a8bd7c1a",
@@ -193,6 +202,16 @@
   ],
   "videos": [
     {
+      "video_id": "SoICZXlYl7g",
+      "title": "Wrexham Match Day Live - Wrexham AFC vs Wolverhampton Wanderers",
+      "published": "2026-09-11T08:56:39+00:00"
+    },
+    {
+      "video_id": "raNeImRbyec",
+      "title": "HOT TAKE | Wrexham v Wolverhampton Wanderers",
+      "published": "2026-11-07T14:55:12+00:00"
+    },
+    {
       "video_id": "dey7hWF9Pag",
       "title": "TRIPLE A | Wrexham AFC vs Middlesbrough",
       "published": "2026-11-06T19:36:14+00:00"
@@ -256,16 +275,6 @@
       "video_id": "daGsN1MqfqQ",
       "title": "INTERVIEW | Lili Jones after Briton Ferry",
       "published": "2026-11-02T13:00:07+00:00"
-    },
-    {
-      "video_id": "FUIWO_fivW4",
-      "title": "INTERVIEW | Jenny Sugarman after Briton Ferry",
-      "published": "2026-11-02T12:00:15+00:00"
-    },
-    {
-      "video_id": "DCTEsNny3t0",
-      "title": "HIGHLIGHTS | Wrexham AFC Women vs Briton Ferry",
-      "published": "2026-11-02T10:48:37+00:00"
     }
   ],
   "sources": {
@@ -273,7 +282,7 @@
     "BBC Welsh Football": "OK (9 relevant items)",
     "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
-    "Sky Sports": "OK (0 relevant items)",
+    "Sky Sports": "OK (1 relevant items)",
     "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }

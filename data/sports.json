@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T09:12:20+00:00",
+  "updated_at": "2026-11-07T15:53:59+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -9,6 +9,15 @@
   "standings": [
     {
       "position": 1,
+      "team_id": 70,
+      "crest": "https://crests.football-data.org/70.png",
+      "team": "Stoke",
+      "played": 15,
+      "goal_difference": 6,
+      "points": 29
+    },
+    {
+      "position": 2,
       "team_id": 343,
       "crest": "https://crests.football-data.org/343.png",
       "team": "Middlesbrough",
@@ -17,30 +26,21 @@
       "points": 28
     },
     {
-      "position": 2,
+      "position": 3,
       "team_id": 76,
       "crest": "https://crests.football-data.org/76.png",
       "team": "Wolverhampton",
-      "played": 14,
+      "played": 15,
       "goal_difference": 8,
-      "points": 27
+      "points": 28
     },
     {
-      "position": 3,
+      "position": 4,
       "team_id": 332,
       "crest": "https://crests.football-data.org/332.png",
       "team": "Birmingham",
       "played": 14,
       "goal_difference": 13,
-      "points": 26
-    },
-    {
-      "position": 4,
-      "team_id": 70,
-      "crest": "https://crests.football-data.org/70.png",
-      "team": "Stoke",
-      "played": 14,
-      "goal_difference": 5,
       "points": 26
     },
     {
@@ -93,27 +93,27 @@
       "team_id": 325,
       "crest": "https://crests.football-data.org/325.png",
       "team": "Portsmouth",
-      "played": 14,
-      "goal_difference": 3,
+      "played": 15,
+      "goal_difference": 2,
       "points": 22
     },
     {
       "position": 11,
+      "team_id": 68,
+      "crest": "https://crests.football-data.org/68.png",
+      "team": "Norwich",
+      "played": 15,
+      "goal_difference": 8,
+      "points": 21
+    },
+    {
+      "position": 12,
       "team_id": 69,
       "crest": "https://crests.football-data.org/69.png",
       "team": "QPR",
       "played": 14,
       "goal_difference": 5,
       "points": 21
-    },
-    {
-      "position": 12,
-      "team_id": 68,
-      "crest": "https://crests.football-data.org/68.png",
-      "team": "Norwich",
-      "played": 14,
-      "goal_difference": 3,
-      "points": 18
     },
     {
       "position": 13,
@@ -135,21 +135,21 @@
     },
     {
       "position": 15,
-      "team_id": 387,
-      "crest": "https://crests.football-data.org/387.png",
-      "team": "Bristol City",
-      "played": 14,
-      "goal_difference": -3,
+      "team_id": 404,
+      "crest": "https://crests.football-data.org/404.png",
+      "team": "Wrexham",
+      "played": 15,
+      "goal_difference": -2,
       "points": 18
     },
     {
       "position": 16,
-      "team_id": 404,
-      "crest": "https://crests.football-data.org/404.png",
-      "team": "Wrexham",
-      "played": 14,
-      "goal_difference": -2,
-      "points": 17
+      "team_id": 387,
+      "crest": "https://crests.football-data.org/387.png",
+      "team": "Bristol City",
+      "played": 15,
+      "goal_difference": -8,
+      "points": 18
     },
     {
       "position": 17,
@@ -225,20 +225,6 @@
     }
   ],
   "fixtures": [
-    {
-      "id": 561933,
-      "home_id": 404,
-      "away_id": 76,
-      "home_crest": "https://crests.football-data.org/404.png",
-      "away_crest": "https://crests.football-data.org/76.png",
-      "home": "Wrexham",
-      "away": "Wolverhampton",
-      "kickoff": "2026-11-07T12:30:00Z",
-      "competition": "Championship",
-      "status": "SCHEDULED",
-      "home_score": null,
-      "away_score": null
-    },
     {
       "id": 561949,
       "home_id": 1126,
@@ -336,9 +322,37 @@
       "status": "SCHEDULED",
       "home_score": null,
       "away_score": null
+    },
+    {
+      "id": 562032,
+      "home_id": 70,
+      "away_id": 404,
+      "home_crest": "https://crests.football-data.org/70.png",
+      "away_crest": "https://crests.football-data.org/404.png",
+      "home": "Stoke",
+      "away": "Wrexham",
+      "kickoff": "2026-12-26T15:00:00Z",
+      "competition": "Championship",
+      "status": "SCHEDULED",
+      "home_score": null,
+      "away_score": null
     }
   ],
   "results": [
+    {
+      "id": 561933,
+      "home_id": 404,
+      "away_id": 76,
+      "home_crest": "https://crests.football-data.org/404.png",
+      "away_crest": "https://crests.football-data.org/76.png",
+      "home": "Wrexham",
+      "away": "Wolverhampton",
+      "kickoff": "2026-11-07T12:30:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 1,
+      "away_score": 1
+    },
     {
       "id": 561927,
       "home_id": 404,
@@ -436,20 +450,6 @@
       "status": "FINISHED",
       "home_score": 2,
       "away_score": 1
-    },
-    {
-      "id": 561842,
-      "home_id": 563,
-      "away_id": 404,
-      "home_crest": "https://crests.football-data.org/563.png",
-      "away_crest": "https://crests.football-data.org/404.png",
-      "home": "West Ham",
-      "away": "Wrexham",
-      "kickoff": "2026-09-11T19:00:00Z",
-      "competition": "Championship",
-      "status": "FINISHED",
-      "home_score": 6,
-      "away_score": 0
     }
   ],
   "pending": [],
