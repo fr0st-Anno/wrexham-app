@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T15:53:59+00:00",
+  "updated_at": "2026-11-07T20:10:34+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -9,6 +9,24 @@
   "standings": [
     {
       "position": 1,
+      "team_id": 332,
+      "crest": "https://crests.football-data.org/332.png",
+      "team": "Birmingham",
+      "played": 15,
+      "goal_difference": 14,
+      "points": 29
+    },
+    {
+      "position": 2,
+      "team_id": 343,
+      "crest": "https://crests.football-data.org/343.png",
+      "team": "Middlesbrough",
+      "played": 15,
+      "goal_difference": 11,
+      "points": 29
+    },
+    {
+      "position": 3,
       "team_id": 70,
       "crest": "https://crests.football-data.org/70.png",
       "team": "Stoke",
@@ -17,16 +35,7 @@
       "points": 29
     },
     {
-      "position": 2,
-      "team_id": 343,
-      "crest": "https://crests.football-data.org/343.png",
-      "team": "Middlesbrough",
-      "played": 14,
-      "goal_difference": 11,
-      "points": 28
-    },
-    {
-      "position": 3,
+      "position": 4,
       "team_id": 76,
       "crest": "https://crests.football-data.org/76.png",
       "team": "Wolverhampton",
@@ -35,61 +44,61 @@
       "points": 28
     },
     {
-      "position": 4,
-      "team_id": 332,
-      "crest": "https://crests.football-data.org/332.png",
-      "team": "Birmingham",
-      "played": 14,
-      "goal_difference": 13,
-      "points": 26
-    },
-    {
       "position": 5,
-      "team_id": 72,
-      "crest": "https://crests.football-data.org/72.png",
-      "team": "Swansea",
-      "played": 14,
-      "goal_difference": 5,
-      "points": 26
-    },
-    {
-      "position": 6,
       "team_id": 74,
       "crest": "https://crests.football-data.org/74.png",
       "team": "West Brom",
-      "played": 14,
-      "goal_difference": 5,
-      "points": 25
+      "played": 15,
+      "goal_difference": 8,
+      "points": 28
+    },
+    {
+      "position": 6,
+      "team_id": 72,
+      "crest": "https://crests.football-data.org/72.png",
+      "team": "Swansea",
+      "played": 15,
+      "goal_difference": 4,
+      "points": 26
     },
     {
       "position": 7,
       "team_id": 340,
       "crest": "https://crests.football-data.org/340.png",
       "team": "Southampton",
-      "played": 14,
-      "goal_difference": 15,
+      "played": 15,
+      "goal_difference": 14,
       "points": 24
     },
     {
       "position": 8,
-      "team_id": 563,
-      "crest": "https://crests.football-data.org/563.png",
-      "team": "West Ham",
-      "played": 14,
-      "goal_difference": 15,
-      "points": 23
+      "team_id": 69,
+      "crest": "https://crests.football-data.org/69.png",
+      "team": "QPR",
+      "played": 15,
+      "goal_difference": 6,
+      "points": 24
     },
     {
       "position": 9,
-      "team_id": 356,
-      "crest": "https://crests.football-data.org/356.png",
-      "team": "Sheffield Utd",
-      "played": 14,
-      "goal_difference": 3,
-      "points": 22
+      "team_id": 563,
+      "crest": "https://crests.football-data.org/563.png",
+      "team": "West Ham",
+      "played": 15,
+      "goal_difference": 14,
+      "points": 23
     },
     {
       "position": 10,
+      "team_id": 356,
+      "crest": "https://crests.football-data.org/356.png",
+      "team": "Sheffield Utd",
+      "played": 15,
+      "goal_difference": 2,
+      "points": 22
+    },
+    {
+      "position": 11,
       "team_id": 325,
       "crest": "https://crests.football-data.org/325.png",
       "team": "Portsmouth",
@@ -98,7 +107,7 @@
       "points": 22
     },
     {
-      "position": 11,
+      "position": 12,
       "team_id": 68,
       "crest": "https://crests.football-data.org/68.png",
       "team": "Norwich",
@@ -107,30 +116,21 @@
       "points": 21
     },
     {
-      "position": 12,
-      "team_id": 69,
-      "crest": "https://crests.football-data.org/69.png",
-      "team": "QPR",
-      "played": 14,
-      "goal_difference": 5,
-      "points": 21
-    },
-    {
       "position": 13,
-      "team_id": 384,
-      "crest": "https://crests.football-data.org/384.png",
-      "team": "Millwall",
-      "played": 14,
-      "goal_difference": -1,
-      "points": 18
-    },
-    {
-      "position": 14,
       "team_id": 59,
       "crest": "https://crests.football-data.org/59.png",
       "team": "Blackburn",
-      "played": 14,
-      "goal_difference": -2,
+      "played": 15,
+      "goal_difference": -1,
+      "points": 21
+    },
+    {
+      "position": 14,
+      "team_id": 715,
+      "crest": "https://crests.football-data.org/715.png",
+      "team": "Cardiff",
+      "played": 15,
+      "goal_difference": 0,
       "points": 18
     },
     {
@@ -144,6 +144,15 @@
     },
     {
       "position": 16,
+      "team_id": 384,
+      "crest": "https://crests.football-data.org/384.png",
+      "team": "Millwall",
+      "played": 15,
+      "goal_difference": -4,
+      "points": 18
+    },
+    {
+      "position": 17,
       "team_id": 387,
       "crest": "https://crests.football-data.org/387.png",
       "team": "Bristol City",
@@ -152,7 +161,7 @@
       "points": 18
     },
     {
-      "position": 17,
+      "position": 18,
       "team_id": 60,
       "crest": "https://crests.football-data.org/60.png",
       "team": "Bolton",
@@ -161,48 +170,39 @@
       "points": 17
     },
     {
-      "position": 18,
-      "team_id": 715,
-      "crest": "https://crests.football-data.org/715.png",
-      "team": "Cardiff",
-      "played": 14,
-      "goal_difference": -1,
-      "points": 15
-    },
-    {
       "position": 19,
-      "team_id": 1126,
-      "crest": "https://crests.football-data.org/1126.png",
-      "team": "Lincoln City",
-      "played": 14,
+      "team_id": 348,
+      "crest": "https://crests.football-data.org/348.png",
+      "team": "Charlton",
+      "played": 15,
       "goal_difference": -10,
-      "points": 15
+      "points": 17
     },
     {
       "position": 20,
       "team_id": 346,
       "crest": "https://crests.football-data.org/346.png",
       "team": "Watford",
-      "played": 14,
+      "played": 15,
       "goal_difference": -10,
-      "points": 14
+      "points": 15
     },
     {
       "position": 21,
-      "team_id": 348,
-      "crest": "https://crests.football-data.org/348.png",
-      "team": "Charlton",
-      "played": 14,
+      "team_id": 1126,
+      "crest": "https://crests.football-data.org/1126.png",
+      "team": "Lincoln City",
+      "played": 15,
       "goal_difference": -11,
-      "points": 14
+      "points": 15
     },
     {
       "position": 22,
       "team_id": 328,
       "crest": "https://crests.football-data.org/328.png",
       "team": "Burnley",
-      "played": 14,
-      "goal_difference": -8,
+      "played": 15,
+      "goal_difference": -9,
       "points": 10
     },
     {
@@ -219,9 +219,9 @@
       "team_id": 1081,
       "crest": "https://crests.football-data.org/1081.png",
       "team": "Preston NE",
-      "played": 14,
-      "goal_difference": -18,
-      "points": 5
+      "played": 15,
+      "goal_difference": -17,
+      "points": 8
     }
   ],
   "fixtures": [

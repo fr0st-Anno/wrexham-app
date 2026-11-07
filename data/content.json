@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T15:53:57+00:00",
+  "updated_at": "2026-11-07T20:10:32+00:00",
   "news": [
     {
       "id": "c34857617525deae7f8d72",
@@ -8,15 +8,6 @@
       "url": "https://www.bbc.co.uk/sport/football/articles/cmwyv05qwvj1o?at_medium=RSS&at_campaign=rss",
       "source": "BBC Welsh Football",
       "published": "2026-11-07T15:26:27+00:00",
-      "category": "Matches"
-    },
-    {
-      "id": "7b7a1de19a4642bc8d8af5",
-      "title": "Wrexham hit back to hold Wolves",
-      "summary": "Lewis O'Brien's first goal of the season earned Wrexham a 1-1 draw and prevented Wolves going top of the SkyBet Championship.",
-      "url": "https://www.skysports.com/football/wrexham-vs-wolverhampton-wanderers/report/560677",
-      "source": "Sky Sports",
-      "published": "2026-11-07T14:10:00+00:00",
       "category": "Matches"
     },
     {
@@ -202,9 +193,19 @@
   ],
   "videos": [
     {
+      "video_id": "ZJHvJ_hv9lk",
+      "title": "INTERVIEW | Lewis O'Brien after Wolves",
+      "published": "2026-11-07T16:45:44+00:00"
+    },
+    {
+      "video_id": "jwe3cc8SOxA",
+      "title": "INTERVIEW | Phil Parkinson after Wolves",
+      "published": "2026-11-07T16:42:46+00:00"
+    },
+    {
       "video_id": "SoICZXlYl7g",
       "title": "Wrexham Match Day Live - Wrexham AFC vs Wolverhampton Wanderers",
-      "published": "2026-09-11T08:56:39+00:00"
+      "published": "2026-11-07T15:49:00+00:00"
     },
     {
       "video_id": "raNeImRbyec",
@@ -265,16 +266,6 @@
       "video_id": "m5UmEf5ISUI",
       "title": "PRESS CONFERENCE | Phil Parkinson ahead of Middlesbrough",
       "published": "2026-11-03T17:27:33+00:00"
-    },
-    {
-      "video_id": "ibNKEwVF3Ak",
-      "title": "TRIPLE A | Sheffield United vs Wrexham AFC",
-      "published": "2026-11-02T17:20:37+00:00"
-    },
-    {
-      "video_id": "daGsN1MqfqQ",
-      "title": "INTERVIEW | Lili Jones after Briton Ferry",
-      "published": "2026-11-02T13:00:07+00:00"
     }
   ],
   "sources": {
@@ -282,7 +273,7 @@
     "BBC Welsh Football": "OK (9 relevant items)",
     "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
-    "Sky Sports": "OK (1 relevant items)",
+    "Sky Sports": "OK (0 relevant items)",
     "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
