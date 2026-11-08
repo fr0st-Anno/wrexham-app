@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-08T13:14:51+00:00",
+  "updated_at": "2026-11-08T18:29:10+00:00",
   "news": [
+    {
+      "id": "e7aaaf59ff2ce9d16d2fa5",
+      "title": "Wrexham progress in Adran Trophy as Cardiff City hit 11",
+      "summary": "Holders Wrexham advance to the last eight of the Adran Trophy with a 5-0 win at Llanfair United, while Cardiff City put 11 goals past Pontypridd United.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cmx2q8v71vdqo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-08T17:26:26+00:00",
+      "category": "Matches"
+    },
+    {
+      "id": "cd5dfe0608bf7d40ee102d",
+      "title": "Shock changes & key results - Wrexham's seismic week",
+      "summary": "BBC Sport Wales addresses the key changes made at Wrexham in what was a seismic week for the Championship club.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cqrkyg434y84o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-08T13:19:22+00:00",
+      "category": "Matches"
+    },
     {
       "id": "c34857617525deae7f8d72",
       "title": "Wrexham owners' presence uplifting - Parkinson",
@@ -54,15 +72,6 @@
       "source": "BBC Sport Championship",
       "published": "2026-11-04T22:03:00+00:00",
       "category": "Club"
-    },
-    {
-      "id": "60aff965e47d8e9f6fdca8",
-      "title": "Wrexham suffer 'significant' Smith injury blow",
-      "summary": "Wrexham forward Sam Smith faces a \"significant\" spell out of action due to a knee injury, manager Phil Parkinson confirms.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cqrmyr0m3ydxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-11-03T15:20:23+00:00",
-      "category": "Injuries"
     },
     {
       "id": "561ad11aac65e515adf193",
@@ -184,6 +193,16 @@
   ],
   "videos": [
     {
+      "video_id": "44mF3s3lOMk",
+      "title": "Y CHWIBAN TERFYNOL | Wrecsam yn erbyn Wolverhampton Wanderers",
+      "published": "2026-11-08T17:49:29+00:00"
+    },
+    {
+      "video_id": "IpVqPWjROMI",
+      "title": "HOT TAKE | Llanfair United v Wrexham",
+      "published": "2026-11-08T17:48:43+00:00"
+    },
+    {
       "video_id": "hlvSk7nenFk",
       "title": "HIGHLIGHTS | Wrexham AFC vs Wolves",
       "published": "2026-11-08T00:00:31+00:00"
@@ -247,23 +266,13 @@
       "video_id": "dX_8_N4A1gM",
       "title": "Y CHWIBAN TERFYNOL | Wrecsam yn erbyn Middlesbrough",
       "published": "2026-11-04T22:35:33+00:00"
-    },
-    {
-      "video_id": "Oj1mnK4kQ40",
-      "title": "HOT TAKE | Wrexham v Middlesbrough",
-      "published": "2026-11-04T21:55:28+00:00"
-    },
-    {
-      "video_id": "9JzIZNDp7kk",
-      "title": "PRESS CONFERENCE | George Thomason ahead of Middlesbrough",
-      "published": "2026-11-04T11:30:27+00:00"
     }
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (8 relevant items)",
+    "BBC Welsh Football": "OK (9 relevant items)",
     "BBC Sport Championship": "OK (2 relevant items)",
-    "BBC Sport": "OK (0 relevant items)",
+    "BBC Sport": "OK (1 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
     "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
