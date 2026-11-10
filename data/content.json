@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-10T11:42:38+00:00",
+  "updated_at": "2026-11-10T19:39:24+00:00",
   "news": [
+    {
+      "id": "719069c0c990e12d58acc7",
+      "title": "'Wolves grind out results but need to find extra edge'",
+      "summary": "Wolves fan writer Dazzling Dave reflects on the draw at Wrexham and says Wanderers need to find an extra edge to really compete for promotion.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cjx232kygqwpo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Sport Championship",
+      "published": "2026-11-10T12:44:43+00:00",
+      "category": "Matches"
+    },
+    {
+      "id": "4d8ec8095a93194ef052cd",
+      "title": "Wales call up MK Dons' Collins as Moore withdraws",
+      "summary": "Wales have called up MK Dons striker Aaron Collins for this month's Nations League matches following Wrexham frontman Kieffer Moore's withdrawal due to injury.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c62l4l2k0lyro?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-10T11:47:59+00:00",
+      "category": "Injuries"
+    },
     {
       "id": "1ee4cdad1c3198206a2aaa",
       "title": "Injuries, noise & scalps - Wrexham's season so far",
@@ -261,9 +279,9 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (8 relevant items)",
-    "BBC Sport Championship": "OK (3 relevant items)",
-    "BBC Sport": "OK (1 relevant items)",
+    "BBC Welsh Football": "OK (9 relevant items)",
+    "BBC Sport Championship": "OK (4 relevant items)",
+    "BBC Sport": "OK (2 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
     "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
