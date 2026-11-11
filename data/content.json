@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T07:08:58+00:00",
+  "updated_at": "2026-11-11T15:35:39+00:00",
   "news": [
     {
       "id": "719069c0c990e12d58acc7",
@@ -54,15 +54,6 @@
       "source": "BBC Welsh Football",
       "published": "2026-11-07T15:26:27+00:00",
       "category": "Matches"
-    },
-    {
-      "id": "fdb012ca55c9bed58d3c17",
-      "title": "Wrexham chief executive Williamson leaves after two years",
-      "summary": "Ryan Reynolds and Rob Mac confirm Shaun Harvey will take key role at the Racecourse as Williamson departs",
-      "url": "https://www.bbc.co.uk/sport/articles/cw05448d6788o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-11-06T16:01:33+00:00",
-      "category": "Transfers"
     },
     {
       "id": "73d490e68e0d43c5daf474",
@@ -279,10 +270,10 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (9 relevant items)",
+    "BBC Welsh Football": "OK (8 relevant items)",
     "BBC Sport Championship": "OK (4 relevant items)",
-    "BBC Sport": "OK (2 relevant items)",
+    "BBC Sport": "OK (1 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
-    "Wrexham AFC YouTube": "Unavailable during this update"
+    "Wrexham AFC YouTube": "OK (15 relevant items)"
   }
 }
