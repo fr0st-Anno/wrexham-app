@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T22:08:14+00:00",
+  "updated_at": "2026-11-14T02:40:33+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -338,8 +338,7 @@
       "away_score": null
     }
   ],
-  "results": [],
-  "pending": [
+  "results": [
     {
       "id": 561933,
       "home_id": 404,
@@ -350,7 +349,7 @@
       "away": "Wolverhampton",
       "kickoff": "2026-11-07T12:30:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 1,
       "away_score": 1
     },
@@ -364,7 +363,7 @@
       "away": "Middlesbrough",
       "kickoff": "2026-11-04T19:45:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 2,
       "away_score": 0
     },
@@ -378,7 +377,7 @@
       "away": "Wrexham",
       "kickoff": "2026-10-30T20:00:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 1,
       "away_score": 0
     },
@@ -392,7 +391,7 @@
       "away": "Wrexham",
       "kickoff": "2026-10-24T14:00:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 2,
       "away_score": 0
     },
@@ -406,7 +405,7 @@
       "away": "Preston NE",
       "kickoff": "2026-10-17T14:00:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 4,
       "away_score": 1
     },
@@ -420,7 +419,7 @@
       "away": "West Brom",
       "kickoff": "2026-10-13T18:45:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 1,
       "away_score": 2
     },
@@ -434,7 +433,7 @@
       "away": "Wrexham",
       "kickoff": "2026-10-10T14:00:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 1,
       "away_score": 1
     },
@@ -448,11 +447,12 @@
       "away": "Southampton",
       "kickoff": "2026-09-19T14:00:00Z",
       "competition": "Championship",
-      "status": "POSTPONED",
+      "status": "FINISHED",
       "home_score": 2,
       "away_score": 1
     }
   ],
+  "pending": [],
   "squad": [
     {
       "name": "Danny Ward",
