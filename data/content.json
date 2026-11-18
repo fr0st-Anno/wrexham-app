@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T02:22:17+00:00",
+  "updated_at": "2026-11-18T10:39:43+00:00",
   "news": [
     {
       "id": "719069c0c990e12d58acc7",
@@ -98,15 +98,6 @@
       "url": "https://www.wrexhamreds.com/features/phil-parkinson-reaches-remarkable-wrexham-milestone-with-home-victory-against-pne/",
       "source": "Wrexham Reds",
       "published": "2026-10-22T14:22:41+00:00",
-      "category": "Club"
-    },
-    {
-      "id": "019c60f9d99d8b3b3be7a8",
-      "title": "Wrexham AFC",
-      "summary": "Wrexham boss Phil Parkinson speaking before their trip to Blackburn Rovers.",
-      "url": "https://www.bbc.co.uk/sounds/play/p0pj17cq?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-10-22T14:02:00+00:00",
       "category": "Club"
     },
     {
@@ -234,7 +225,7 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (4 relevant items)",
+    "BBC Welsh Football": "OK (3 relevant items)",
     "BBC Sport Championship": "OK (4 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
