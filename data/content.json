@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-11-19T09:27:52+00:00",
+  "updated_at": "2026-11-19T18:38:26+00:00",
   "news": [
+    {
+      "id": "cf19277b257d2b3f300da4",
+      "title": "Parkinson cautious on Wrexham trio injury return",
+      "summary": "Wrexham manager Phil Parkinson says Josh Windass, Nathan Broadhead and Callum O'Hare are making progress with their injuries, but none are ready to return to action yet.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/cw0k6g8renmko?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-19T15:22:41+00:00",
+      "category": "Injuries"
+    },
     {
       "id": "1ee4cdad1c3198206a2aaa",
       "title": "Injuries, noise & scalps - Wrexham's season so far",
@@ -130,6 +139,11 @@
   ],
   "videos": [
     {
+      "video_id": "uyo6X8VgT3U",
+      "title": "Ben Tozer and Steven Fletcher lift Twinning Cup 🏆 | Wrexham AFC x Kick4Life",
+      "published": "2026-11-19T11:15:48+00:00"
+    },
+    {
       "video_id": "WCrZFGgHVgc",
       "title": "TRIPLE A | Wrexham AFC vs Wolves",
       "published": "2026-11-09T18:17:54+00:00"
@@ -198,16 +212,11 @@
       "video_id": "FE0I_aI3HtM",
       "title": "INTERVIEW | George Dobson after Middlesbrough",
       "published": "2026-11-04T23:58:30+00:00"
-    },
-    {
-      "video_id": "sKklxeijOco",
-      "title": "INTERVIEW | Phil Parkinson after Middlesbrough",
-      "published": "2026-11-04T23:58:10+00:00"
     }
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (2 relevant items)",
+    "BBC Welsh Football": "OK (3 relevant items)",
     "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
