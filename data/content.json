@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-11-21T15:16:36+00:00",
+  "updated_at": "2026-11-21T21:05:27+00:00",
   "news": [
+    {
+      "id": "330e1d7784ab4119510a22",
+      "title": "Thomason's heart typifies Wrexham - Parkinson",
+      "summary": "Phil Parkinson says match-winner George Thomason's \"heart\" typifies what Wrexham want after the midfielder's crucial goal at Lincoln City.",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c9p83ky012vvo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Welsh Football",
+      "published": "2026-11-21T17:54:07+00:00",
+      "category": "Matches"
+    },
     {
       "id": "c2cccc9946bc3ac6392004",
       "title": "Cleworth set for 200th Wrexham game",
@@ -148,6 +157,21 @@
   ],
   "videos": [
     {
+      "video_id": "sYPjlCB1Bk4",
+      "title": "INTERVIEW | George Thomoson after Lincoln City",
+      "published": "2026-11-21T18:06:22+00:00"
+    },
+    {
+      "video_id": "SeSfhty9xcM",
+      "title": "INTERVIEW | Phil Parkinson after Lincoln City",
+      "published": "2026-11-21T18:06:03+00:00"
+    },
+    {
+      "video_id": "FJSRY32C8Gw",
+      "title": "HOT TAKE | Lincoln City v Wrexham",
+      "published": "2026-11-21T17:10:54+00:00"
+    },
+    {
       "video_id": "CIh6ZmBxR8Y",
       "title": "PRESS CONFERENCE | Max Cleworth ahead of Lincoln City",
       "published": "2026-11-20T12:23:52+00:00"
@@ -206,26 +230,11 @@
       "video_id": "raNeImRbyec",
       "title": "HOT TAKE | Wrexham v Wolverhampton Wanderers",
       "published": "2026-11-07T14:55:12+00:00"
-    },
-    {
-      "video_id": "dey7hWF9Pag",
-      "title": "TRIPLE A | Wrexham AFC vs Middlesbrough",
-      "published": "2026-11-06T19:36:14+00:00"
-    },
-    {
-      "video_id": "PhFpnUdpuZ8",
-      "title": "PRESS CONFERENCE | Max Cleworth ahead of Wolves",
-      "published": "2026-11-06T19:31:06+00:00"
-    },
-    {
-      "video_id": "oxqZGfp_w9w",
-      "title": "PRESS CONFERENCE | Phil Parkinson ahead of Wolverhampton Wanderers",
-      "published": "2026-11-06T18:48:00+00:00"
     }
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (4 relevant items)",
+    "BBC Welsh Football": "OK (5 relevant items)",
     "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
