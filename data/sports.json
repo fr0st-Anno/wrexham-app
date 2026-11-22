@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T08:45:44+00:00",
+  "updated_at": "2026-11-22T17:04:28+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -120,26 +120,26 @@
       "team_id": 59,
       "crest": "https://crests.football-data.org/59.png",
       "team": "Blackburn",
-      "played": 15,
+      "played": 16,
+      "goal_difference": -1,
+      "points": 22
+    },
+    {
+      "position": 14,
+      "team_id": 404,
+      "crest": "https://crests.football-data.org/404.png",
+      "team": "Wrexham",
+      "played": 16,
       "goal_difference": -1,
       "points": 21
     },
     {
-      "position": 14,
+      "position": 15,
       "team_id": 715,
       "crest": "https://crests.football-data.org/715.png",
       "team": "Cardiff",
       "played": 16,
       "goal_difference": -1,
-      "points": 18
-    },
-    {
-      "position": 15,
-      "team_id": 404,
-      "crest": "https://crests.football-data.org/404.png",
-      "team": "Wrexham",
-      "played": 15,
-      "goal_difference": -2,
       "points": 18
     },
     {
@@ -183,8 +183,8 @@
       "team_id": 1126,
       "crest": "https://crests.football-data.org/1126.png",
       "team": "Lincoln City",
-      "played": 15,
-      "goal_difference": -11,
+      "played": 16,
+      "goal_difference": -12,
       "points": 15
     },
     {
@@ -201,9 +201,9 @@
       "team_id": 328,
       "crest": "https://crests.football-data.org/328.png",
       "team": "Burnley",
-      "played": 15,
+      "played": 16,
       "goal_difference": -9,
-      "points": 10
+      "points": 11
     },
     {
       "position": 23,
