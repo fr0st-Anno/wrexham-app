@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T22:26:36+00:00",
+  "updated_at": "2026-11-23T03:03:55+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -340,6 +340,20 @@
   ],
   "results": [
     {
+      "id": 561949,
+      "home_id": 1126,
+      "away_id": 404,
+      "home_crest": "https://crests.football-data.org/1126.png",
+      "away_crest": "https://crests.football-data.org/404.png",
+      "home": "Lincoln City",
+      "away": "Wrexham",
+      "kickoff": "2026-11-21T15:00:00Z",
+      "competition": "Championship",
+      "status": "FINISHED",
+      "home_score": 0,
+      "away_score": 1
+    },
+    {
       "id": 561933,
       "home_id": 404,
       "away_id": 76,
@@ -436,38 +450,9 @@
       "status": "FINISHED",
       "home_score": 1,
       "away_score": 1
-    },
-    {
-      "id": 561846,
-      "home_id": 404,
-      "away_id": 340,
-      "home_crest": "https://crests.football-data.org/404.png",
-      "away_crest": "https://crests.football-data.org/340.png",
-      "home": "Wrexham",
-      "away": "Southampton",
-      "kickoff": "2026-09-19T14:00:00Z",
-      "competition": "Championship",
-      "status": "FINISHED",
-      "home_score": 2,
-      "away_score": 1
     }
   ],
-  "pending": [
-    {
-      "id": 561949,
-      "home_id": 1126,
-      "away_id": 404,
-      "home_crest": "https://crests.football-data.org/1126.png",
-      "away_crest": "https://crests.football-data.org/404.png",
-      "home": "Lincoln City",
-      "away": "Wrexham",
-      "kickoff": "2026-11-21T15:00:00Z",
-      "competition": "Championship",
-      "status": "IN_PLAY",
-      "home_score": 0,
-      "away_score": 1
-    }
-  ],
+  "pending": [],
   "squad": [
     {
       "name": "Danny Ward",
