@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T03:03:53+00:00",
+  "updated_at": "2026-11-23T12:21:10+00:00",
   "news": [
     {
       "id": "06f8eafe6e509c90c5cb44",
@@ -27,15 +27,6 @@
       "source": "BBC Welsh Football",
       "published": "2026-11-21T09:38:43+00:00",
       "category": "Players"
-    },
-    {
-      "id": "cf19277b257d2b3f300da4",
-      "title": "Parkinson cautious on Wrexham trio injury return",
-      "summary": "Wrexham manager Phil Parkinson says Josh Windass, Nathan Broadhead and Callum O'Hare are making progress with their injuries, but none are ready to return to action yet.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/cw0k6g8renmko?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-11-19T15:22:41+00:00",
-      "category": "Injuries"
     },
     {
       "id": "1ee4cdad1c3198206a2aaa",
@@ -166,6 +157,11 @@
   ],
   "videos": [
     {
+      "video_id": "E4DhNBnV5YY",
+      "title": "HIGHLIGHTS | The New Saints vs Wrexham AFC Women",
+      "published": "2026-11-23T11:17:07+00:00"
+    },
+    {
       "video_id": "SEC9cX4JTxw",
       "title": "HOT TAKE | TNS v Wrexham",
       "published": "2026-11-22T21:07:28+00:00"
@@ -234,16 +230,11 @@
       "video_id": "ZJHvJ_hv9lk",
       "title": "INTERVIEW | Lewis O'Brien after Wolves",
       "published": "2026-11-07T16:45:44+00:00"
-    },
-    {
-      "video_id": "jwe3cc8SOxA",
-      "title": "INTERVIEW | Phil Parkinson after Wolves",
-      "published": "2026-11-07T16:42:46+00:00"
     }
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (6 relevant items)",
+    "BBC Welsh Football": "OK (5 relevant items)",
     "BBC Sport Championship": "OK (2 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
