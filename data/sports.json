@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T10:22:57+00:00",
+  "updated_at": "2026-11-24T20:51:42+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -226,20 +226,6 @@
   ],
   "fixtures": [
     {
-      "id": 561959,
-      "home_id": 387,
-      "away_id": 404,
-      "home_crest": "https://crests.football-data.org/387.png",
-      "away_crest": "https://crests.football-data.org/404.png",
-      "home": "Bristol City",
-      "away": "Wrexham",
-      "kickoff": "2026-11-24T19:45:00Z",
-      "competition": "Championship",
-      "status": "SCHEDULED",
-      "home_score": null,
-      "away_score": null
-    },
-    {
       "id": 561965,
       "home_id": 404,
       "away_id": 325,
@@ -332,6 +318,20 @@
       "home": "Wrexham",
       "away": "Blackburn",
       "kickoff": "2026-12-29T18:00:00Z",
+      "competition": "Championship",
+      "status": "SCHEDULED",
+      "home_score": null,
+      "away_score": null
+    },
+    {
+      "id": 562058,
+      "home_id": 404,
+      "away_id": 60,
+      "home_crest": "https://crests.football-data.org/404.png",
+      "away_crest": "https://crests.football-data.org/60.png",
+      "home": "Wrexham",
+      "away": "Bolton",
+      "kickoff": "2027-01-01T12:00:00Z",
       "competition": "Championship",
       "status": "SCHEDULED",
       "home_score": null,
@@ -452,7 +452,22 @@
       "away_score": 1
     }
   ],
-  "pending": [],
+  "pending": [
+    {
+      "id": 561959,
+      "home_id": 387,
+      "away_id": 404,
+      "home_crest": "https://crests.football-data.org/387.png",
+      "away_crest": "https://crests.football-data.org/404.png",
+      "home": "Bristol City",
+      "away": "Wrexham",
+      "kickoff": "2026-11-24T19:45:00Z",
+      "competition": "Championship",
+      "status": "IN_PLAY",
+      "home_score": 0,
+      "away_score": 1
+    }
+  ],
   "squad": [
     {
       "name": "Danny Ward",

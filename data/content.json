@@ -1,15 +1,6 @@
 {
-  "updated_at": "2026-11-24T10:22:56+00:00",
+  "updated_at": "2026-11-24T20:51:41+00:00",
   "news": [
-    {
-      "id": "b7b9d26a70a7dcaf9e5868",
-      "title": "Parkinson urges Wrexham to build on away win",
-      "summary": "Wrexham ended a run of five away games without a win and manager Phil Parkinson wants more.",
-      "url": "https://www.bbc.co.uk/sport/football/articles/crvg27j75nylo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Welsh Football",
-      "published": "2026-11-23T19:14:20+00:00",
-      "category": "Matches"
-    },
     {
       "id": "38db89033b75d2b297e576",
       "title": "Wrexham could spell end of Skubala's short tenure",
@@ -234,7 +225,7 @@
   ],
   "sources": {
     "Wrexham Reds": "OK (10 relevant items)",
-    "BBC Welsh Football": "OK (4 relevant items)",
+    "BBC Welsh Football": "OK (3 relevant items)",
     "BBC Sport Championship": "OK (3 relevant items)",
     "BBC Sport": "OK (0 relevant items)",
     "Sky Sports": "OK (0 relevant items)",
