@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T14:16:21+00:00",
+  "updated_at": "2026-11-25T23:16:16+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -18,6 +18,15 @@
     },
     {
       "position": 2,
+      "team_id": 70,
+      "crest": "https://crests.football-data.org/70.png",
+      "team": "Stoke",
+      "played": 17,
+      "goal_difference": 8,
+      "points": 35
+    },
+    {
+      "position": 3,
       "team_id": 76,
       "crest": "https://crests.football-data.org/76.png",
       "team": "Wolverhampton",
@@ -26,31 +35,22 @@
       "points": 34
     },
     {
-      "position": 3,
-      "team_id": 70,
-      "crest": "https://crests.football-data.org/70.png",
-      "team": "Stoke",
-      "played": 16,
-      "goal_difference": 7,
-      "points": 32
-    },
-    {
       "position": 4,
       "team_id": 332,
       "crest": "https://crests.football-data.org/332.png",
       "team": "Birmingham",
-      "played": 16,
-      "goal_difference": 13,
-      "points": 29
+      "played": 17,
+      "goal_difference": 15,
+      "points": 32
     },
     {
       "position": 5,
       "team_id": 74,
       "crest": "https://crests.football-data.org/74.png",
       "team": "West Brom",
-      "played": 16,
-      "goal_difference": 8,
-      "points": 29
+      "played": 17,
+      "goal_difference": 10,
+      "points": 32
     },
     {
       "position": 6,
@@ -108,21 +108,21 @@
     },
     {
       "position": 12,
+      "team_id": 59,
+      "crest": "https://crests.football-data.org/59.png",
+      "team": "Blackburn",
+      "played": 17,
+      "goal_difference": 0,
+      "points": 25
+    },
+    {
+      "position": 13,
       "team_id": 563,
       "crest": "https://crests.football-data.org/563.png",
       "team": "West Ham",
       "played": 17,
       "goal_difference": 13,
       "points": 24
-    },
-    {
-      "position": 13,
-      "team_id": 59,
-      "crest": "https://crests.football-data.org/59.png",
-      "team": "Blackburn",
-      "played": 16,
-      "goal_difference": -1,
-      "points": 22
     },
     {
       "position": 14,
@@ -165,8 +165,8 @@
       "team_id": 384,
       "crest": "https://crests.football-data.org/384.png",
       "team": "Millwall",
-      "played": 16,
-      "goal_difference": -5,
+      "played": 17,
+      "goal_difference": -6,
       "points": 18
     },
     {
@@ -174,8 +174,8 @@
       "team_id": 60,
       "crest": "https://crests.football-data.org/60.png",
       "team": "Bolton",
-      "played": 16,
-      "goal_difference": -9,
+      "played": 17,
+      "goal_difference": -11,
       "points": 18
     },
     {
@@ -183,8 +183,8 @@
       "team_id": 346,
       "crest": "https://crests.football-data.org/346.png",
       "team": "Watford",
-      "played": 16,
-      "goal_difference": -14,
+      "played": 17,
+      "goal_difference": -15,
       "points": 15
     },
     {
@@ -210,8 +210,8 @@
       "team_id": 328,
       "crest": "https://crests.football-data.org/328.png",
       "team": "Burnley",
-      "played": 16,
-      "goal_difference": -9,
+      "played": 17,
+      "goal_difference": -11,
       "points": 11
     },
     {
