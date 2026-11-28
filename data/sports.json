@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T18:53:06+00:00",
+  "updated_at": "2026-11-28T01:54:42+00:00",
   "source": "football-data.org",
   "status": "connected",
   "season": {
@@ -12,8 +12,8 @@
       "team_id": 343,
       "crest": "https://crests.football-data.org/343.png",
       "team": "Middlesbrough",
-      "played": 17,
-      "goal_difference": 14,
+      "played": 18,
+      "goal_difference": 12,
       "points": 35
     },
     {
@@ -57,9 +57,9 @@
       "team_id": 340,
       "crest": "https://crests.football-data.org/340.png",
       "team": "Southampton",
-      "played": 17,
-      "goal_difference": 16,
-      "points": 28
+      "played": 18,
+      "goal_difference": 18,
+      "points": 31
     },
     {
       "position": 7,
